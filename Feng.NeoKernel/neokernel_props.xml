@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<props_list>
+<props>
+		<agent_id>100</agent_id>
+		<classname>com.neokernel.nk.ServiceManager</classname>
+		<hide_debug>true</hide_debug>
+		<name>ServiceManager</name>
+		<startup>true</startup>
+	</props>
+	<props>
+		<agent_id>115</agent_id>
+		<classname>com.neokernel.om.FileObjectManager</classname>
+		<file_store_dir>./</file_store_dir>
+		<name>FileObjectManager</name>
+		<om_type>FileObjectManager</om_type>
+		<service_name>object_manager</service_name>
+		<startup>true</startup>
+	</props>
+	<props>
+		<agent_id>125</agent_id>
+		<classname>com.neokernel.om.SessionManager</classname>
+		<name>SessionManager</name>
+		<om_service_name>object_manager</om_service_name>
+		<service_name>session_manager</service_name>
+		<session_type>session</session_type>
+		<startup>true</startup>
+	</props>
+	<props>
+		<agent_id>130</agent_id>
+		<classname>com.neokernel.om.SessionReaper</classname>
+		<name>SessionReaper</name>
+		<om_service_name>object_manager</om_service_name>
+		<schedule>between 0:0:0-23:59:59 every 5m</schedule>
+		<session_timeout_ms>30000</session_timeout_ms>
+		<session_type>session</session_type>
+		<startup>true</startup>
+	</props>
+	
+	<props>
+		<agent_id>151</agent_id>
+		<allow_directory_lists>yes</allow_directory_lists>
+		<classname>com.neokernel.httpd.HTTPFileServerAgent</classname>
+		<hide_debug>false</hide_debug>
+		<hide_println>false</hide_println>
+		<hide_warning>false</hide_warning>
+		<html_directory>./Web</html_directory>
+		<name>HTTPFileServerAgent</name>
+		<startup>true</startup>
+	</props>
+	
+	<props>
+		<classname>com.neokernel.httpd.HTTPPutAgent</classname>
+		<html_directory>./Web/</html_directory>
+		<make_directories>true</make_directories>
+		<service_name>put_agent</service_name>
+		<startup>true</startup>
+	</props>
+	
+	<props>
+		<agent_id>175</agent_id>
+		<bind_port>8088</bind_port>
+		<classname>com.neokernel.httpd.WebServer</classname>
+		<hide_debug>false</hide_debug>
+		<hide_println>false</hide_println>
+		<hide_warning>false</hide_warning>
+		<index_agent>HTTPFileServerAgent</index_agent>
+		<log_file_dir>.\logs\</log_file_dir>
+		<log_requests>true</log_requests>
+		<max_connections>20</max_connections>
+		<multihome>true</multihome>
+		<name>WebServer</name>
+		<socket_linger_time>2000</socket_linger_time>
+		<startup>true</startup>
+		<http_put.agent>put_agent</http_put.agent>
+		<thread_pool_timeout>20000</thread_pool_timeout>
+	</props>
+	
+	<props>
+		<agent_id>120</agent_id>
+		<classname>com.neokernel.om.AgentServer</classname>
+		<name>AgentServer</name>
+		<om_service_name>object_manager</om_service_name>
+		<service_name>agent_server</service_name>
+		<startup>true</startup>
+	</props>
+
+  <props>
+    <agent_id>500</agent_id>
+    <classname>Feng.Neokernel.Agent.ScheduleTaskFactoryAgent</classname>
+    <hide_debug>false</hide_debug>
+    <hide_warning>false</hide_warning>
+    <hide_println>false</hide_println>
+    <startup>false</startup>
+  </props>
+
+  <props>
+    <agent_id>600</agent_id>
+    <classname>Feng.Server.ComponentArtSOA.SoaDataServiceAgent</classname>
+    <hide_debug>false</hide_debug>
+    <hide_warning>false</hide_warning>
+    <hide_println>false</hide_println>
+    <startup>false</startup>
+  </props>
+  
+  <props>
+    <agent_id>700</agent_id>
+    <classname>Feng.NeoKernel.Agent.WebServiceHostFactoryAgent</classname>
+    <hide_debug>false</hide_debug>
+    <hide_warning>false</hide_warning>
+    <hide_println>false</hide_println>
+    <startup>true</startup>
+  </props>
+
+
+</props_list>

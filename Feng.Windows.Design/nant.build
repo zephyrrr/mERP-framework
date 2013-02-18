@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<project name="Feng.Windows.Design" default="build">
+<property name="basename" value="Feng.Windows.Design" /> 
+<property name="debug" value="true" /> 
+<property name="build.dir" value="../Reference" /> 
+<target name="clean" description="cleans build directory">
+  <delete failonerror="false">
+  <fileset>
+    <include name="${build.dir}/${basename}.dll" /> 
+    <include name="${build.dir}/${basename}.pdb" />
+    <include name="${build.dir}/${basename}.xml" />
+  </fileset>
+  </delete>
+</target>
+<target name="debug">
+  <call target="build" />
+</target>
+<target name="release">
+  <property name="debug" value="false" /> 
+  <property name="build.dir" value="../Reference" />
+  <call target="build" />
+</target>
+<target name="svn">
+  <svn-update
+    destination="." 
+    uri="svn://192.168.1.66/BasicControls.Design" 
+    recursive="true"
+    quiet="true"
+    username="zephyrrr"
+    password="zephyrrr" 
+    revision="HEAD"
+    cach-auth="false"
+    verbole="true"
+  />
+</target>
+<target name="build">
+  <mkdir dir="${build.dir}" /> 
+  <csc target="library" output="${build.dir}/${basename}.dll" debug="${debug}" doc="${build.dir}/${basename}.xml">
+  <sources>
+    <include name="*.cs" />
+  </sources>
+  <references>
+    <lib>
+         <include name="..\Support" />
+    </lib>
+    <include name="System.dll" /> 
+    <include name="System.Data.dll" /> 
+    <include name="System.Drawing.dll" /> 
+    <include name="System.Windows.Forms.dll" /> 
+    <include name="System.Design.dll" />
+    <include name="System.XML.dll" />
+    <include name="..\Reference\AMS.TextBox.dll" /> 
+    <include name="Xceed.Editors.dll" />
+    <include name="Xceed.Grid.dll" />
+    <include name="Xceed.UI.dll" />
+    <include name="Xceed.Validation.dll" />
+    <include name="Xceed.DockingWindows.dll" />
+    <include name="Xceed.SmartUI.dll" />
+	<include name="Xceed.SmartUI.Controls.dll" />
+	<include name="Xceed.SmartUI.UIStyle.dll" />
+	  <include name="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll"/>
+	  <include name="..\Reference\Feng.Base.dll" />
+	  <include name="..\Reference\Feng.Windows.dll" />
+	      
+  </references>
+  </csc>
+</target>
+</project>

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Practices.ServiceLocation", "Microsoft.Practices.ServiceLocation.csproj", "{A4F73BBF-142A-4B6E-97D4-3048F3BBC37E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4F73BBF-142A-4B6E-97D4-3048F3BBC37E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4F73BBF-142A-4B6E-97D4-3048F3BBC37E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4F73BBF-142A-4B6E-97D4-3048F3BBC37E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4F73BBF-142A-4B6E-97D4-3048F3BBC37E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

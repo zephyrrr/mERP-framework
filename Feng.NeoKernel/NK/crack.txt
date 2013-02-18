@@ -1,0 +1,14 @@
+﻿1. StartupAgent.cs
+compile ok
+in addDefaultAgentPropsToList, remove directory check
+2. XMLStartupAgent.cs
+remove license check
+
+
+3. Neokernel.cs
+in createAgent(Props agentProps)
+add 
+if (classname.Equals("com.neokernel.xml.XMLStartupAgent"))
+{
+	classname = "Feng.NeoKernel.nk.LicenseFreeXMLStartupAgent";
+}

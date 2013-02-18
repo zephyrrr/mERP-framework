@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{284BE641-557D-4DB8-83F7-DDB2D1C06121}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Feng</RootNamespace>
+    <AssemblyName>Feng.Dao</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Reference\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Reference\Feng.Dao.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Reference\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Reference\Release\Feng.Dao.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\Common\Feng.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Feng.Base" />
+    <Reference Include="Feng.Model" />
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Common\VersionAssemblyInfo.cs">
+      <Link>Properties\VersionAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AbstractEventDao.cs" />
+    <Compile Include="AbstractEventDao~1.cs" />
+    <Compile Include="AbstractMemoryDao~1.cs" />
+    <Compile Include="AbstractRelationalDao~2.cs" />
+    <Compile Include="BaseDao~1.cs" />
+    <Compile Include="DaoHelper.cs" />
+    <Compile Include="DelegateDao.cs" />
+    <Compile Include="EmptyDao.cs" />
+    <Compile Include="IBaseDao.cs" />
+    <Compile Include="IBaseDao~1.cs" />
+    <Compile Include="IBatchDao.cs" />
+    <Compile Include="ICancellateDao.cs" />
+    <Compile Include="IEventDao.cs" />
+    <Compile Include="IRelationalDao.cs" />
+    <Compile Include="IRelationalDao~2.cs" />
+    <Compile Include="IRepositoryDao~1.cs" />
+    <Compile Include="ISubmittedEntityDao.cs" />
+    <Compile Include="LogEntityDao.cs" />
+    <Compile Include="ManytoOneDao.cs" />
+    <Compile Include="MasterDao12~2.cs" />
+    <Compile Include="MasterDao22~2.cs" />
+    <Compile Include="MasterDao2~2.cs" />
+    <Compile Include="MasterDao3~2.cs" />
+    <Compile Include="MasterDao~2.cs" />
+    <Compile Include="MasterDetailMemoryDao~2.cs" />
+    <Compile Include="MasterGenerateDetailDao~1.cs" />
+    <Compile Include="MasterNoRelationDao22~2.cs" />
+    <Compile Include="MasterNoRelationDao~2.cs" />
+    <Compile Include="MemoryDao2~1.cs" />
+    <Compile Include="MemoryDao~1.cs" />
+    <Compile Include="MultiOrgEntityDao.cs" />
+    <Compile Include="OneToOneChildDao~2.cs" />
+    <Compile Include="OnetoOneDao~2.cs" />
+    <Compile Include="OnetoOneGenerateChildDao~2.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Common\Feng.snk">
+      <Link>Feng.snk</Link>
+    </None>
+    <None Include="Dao.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns="urn:schemas-microsoft-com:office:spreadsheet">
+ <Styles>
+<Style ss:ID="xsHeader">
+      <Borders>
+        <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+      </Borders>
+      <Font ss:FontName="宋体" ss:Size="9" ss:Color="Black" ss:Bold="1" />
+      <Interior ss:Color="White" ss:Pattern="Solid" />
+    </Style><Style ss:ID="xsBoolean">
+      <Alignment ss:Horizontal="Center" ss:Vertical="Center" />
+      <Borders>
+        <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+      </Borders>
+      <Font ss:FontName="宋体" ss:Size="9" />
+      <Interior ss:Color="#FFFFFF" ss:Pattern="Solid" />
+    </Style><Style ss:ID="xsString">
+      <Alignment ss:Horizontal="Left" ss:Vertical="Top" />
+      <Borders>
+        <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+      </Borders>
+      <Font ss:FontName="宋体" ss:Size="9" />
+      <Interior ss:Color="#FFFFFF" ss:Pattern="Solid" />
+    </Style><Style ss:ID="xsNumber">
+      <Alignment ss:Horizontal="Right" ss:Vertical="Top" />
+      <Borders>
+        <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+      </Borders>
+      <Font ss:FontName="宋体" ss:Size="9" />
+      <Interior ss:Color="#FFFFFF" ss:Pattern="Solid" />
+    </Style> </Styles>
+ <Worksheet ss:Name="AD_Window">
+  <Table>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Name</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Version</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Text</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Description</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Help</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">WindowType</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ImageName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Access</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">GenerateDetailForm</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">DetailWindow</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">DetailForm</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">AutoProcess</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">IsActive</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">CreatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Created</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">UpdatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Updated</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ClientId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">OrgId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">EventInitialized</ss:Data></ss:Cell>
+   </ss:Row>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">SD_Attachment</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">1</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">SD_Attachment</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">1</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:*</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsBoolean"><ss:Data ss:Type="Boolean">1</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsBoolean"><ss:Data ss:Type="Boolean">1</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">system</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">2010/7/27 8:21:42</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+   </ss:Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="AD_Form">
+  <Table>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Name</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Version</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Text</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ImageName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Description</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Help</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ClassName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Params</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Access</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">IsActive</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">CreatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Created</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">UpdatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Updated</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ClientId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">OrgId</ss:Data></ss:Cell>
+   </ss:Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="AD_Window_Tab">
+  <Table>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Name</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Version</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Text</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Description</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Help</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Parent</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">IsInGrid</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">IsInDetailForm</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SeqNo</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">WhereClause</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">OrderByClause</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Window</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ControlManagerClassName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">DisplayManagerClassName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SearchManagerClassName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SearchManagerClassParams</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">BusinessLayerClassName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">BusinessLayerClassParams</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">RepositoryConfigName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">GridName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">IsActive</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">CreatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Created</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">UpdatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Updated</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ClientId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">OrgId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SelectedDataValueChanged</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SearchManagerAdditionalSearchExpression</ss:Data></ss:Cell>
+   </ss:Row>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">SD_Attachment</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">1</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">SD_Attachment</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsBoolean"><ss:Data ss:Type="Boolean">1</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsBoolean"><ss:Data ss:Type="Boolean">1</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">SD_Attachment</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">Feng.Windows.Forms.ControlManager`1[[Feng.AttachmentInfo, Feng.Application]], Feng.Windows.Controller</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">Feng.NH.SearchManager`1[[Feng.AttachmentInfo, Feng.Application]], Feng.Controller</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">Feng.MultiOrgEntityDao`1[[Feng.AttachmentInfo, Feng.Application]], Feng.Controller</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">SD_Attachment</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsBoolean"><ss:Data ss:Type="Boolean">1</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">system</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">2010/7/27 8:21:42</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+   </ss:Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="AD_Window_Menu">
+  <Table>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Name</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Version</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Text</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Description</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Help</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ImageName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SeqNo</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Type</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ExecuteParam</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Window</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">InMasterWindow</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Enable</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">EnableState</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Visible</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">IsActive</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">CreatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Created</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">UpdatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Updated</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ClientId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">OrgId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">OriginalName</ss:Data></ss:Cell>
+   </ss:Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="AD_Grid">
+  <Table>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Name</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Version</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Help</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Description</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">GridName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">AllowInsert</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">AllowEdit</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">AllowDelete</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">AllowOperationInsert</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">AllowOperationEdit</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">AllowOperationDelete</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">AllowInnerInsert</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">AllowInnerEdit</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">AllowInnerDelete</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Visible</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">StatTitle</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">IsActive</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">CreatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Created</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">UpdatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Updated</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ClientId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">OrgId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">VisibleAsDetail</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">AllowExcelOperation</ss:Data></ss:Cell>
+   </ss:Row>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">SD_Attachment</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">1</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">SD_Attachment</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:*</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:*</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:*</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:*</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:*</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:*</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:Nobody</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:Nobody</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:*</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:*</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsBoolean"><ss:Data ss:Type="Boolean">1</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">system</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">2010/7/27 8:21:42</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">200001</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">2010/7/27 8:46:24</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:*</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:Nobody</ss:Data></ss:Cell>
+   </ss:Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="AD_Grid_Column">
+  <Table>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Name</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Version</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Help</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Description</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">GridName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Navigator</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">PropertyName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Type</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Caption</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SeqNo</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ReadOnly</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ColumnVisible</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">NotNull</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ValidRegularExpression</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ValidErrorMessage</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">GridColumnType</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">GridColumnName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">CellViewerManager</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">CellEditorManager</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">CellViewerManagerParam</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">CellEditorManagerParam</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">AllowSetList</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">StatFunction</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">StatTitle</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ParentPropertyName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">DataControlVisible</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SearchControlVisible</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">DataControlType</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SearchControlType</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SearchControlInitParam</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">DataControlDefaultValue</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SearchControlDefaultValue</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SearchControlDefaultOrder</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SearchControlFullPropertyName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SearchControlAdditionalSearchExpression</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ControlInitParamFilter</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">CellEditorManagerParamFilter</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SearchNullUseFull</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">IsActive</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">CreatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Created</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">UpdatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Updated</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ClientId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">OrgId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">BackColor</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ForeColor</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">FontName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">FontSize</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">DoubleClick</ss:Data></ss:Cell>
+   </ss:Row>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">SD_Attachment_Data</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">5</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">SD_Attachment</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">Data</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">System.Byte[], mscorlib</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">数据</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">2</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:Nobody</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:*</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:Nobody</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">9</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">FileName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsBoolean"><ss:Data ss:Type="Boolean">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:*</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:*</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">MyFileBox</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsBoolean"><ss:Data ss:Type="Boolean">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsBoolean"><ss:Data ss:Type="Boolean">1</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">system</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">2010/7/27 8:21:42</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">200001</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">2010/7/27 8:47:00</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+   </ss:Row>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">SD_Attachment_Description</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">5</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">SD_Attachment</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">Description</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">System.String, mscorlib</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">描述</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:Nobody</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:*</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:Nobody</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsBoolean"><ss:Data ss:Type="Boolean">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:*</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:*</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">MyTextBox</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsBoolean"><ss:Data ss:Type="Boolean">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsBoolean"><ss:Data ss:Type="Boolean">1</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">system</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">2010/7/27 8:21:42</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">200001</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">2010/7/27 8:47:00</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+   </ss:Row>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">SD_Attachment_FileName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">5</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">SD_Attachment</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">FileName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">System.String, mscorlib</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">文件</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">1</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:Nobody</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:*</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:Nobody</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsBoolean"><ss:Data ss:Type="Boolean">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:*</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">I:*</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">MyTextBox</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsBoolean"><ss:Data ss:Type="Boolean">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsBoolean"><ss:Data ss:Type="Boolean">1</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">system</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">2010/7/27 8:21:42</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">200001</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">2010/7/27 8:46:24</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+   </ss:Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="AD_Grid_Column_Warning">
+  <Table>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Name</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Text</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Version</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Description</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Help</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">GroupName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SeqNo</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Visible</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ImageName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Expression</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">IsActive</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">CreatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Created</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">UpdatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Updated</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ClientId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">OrgId</ss:Data></ss:Cell>
+   </ss:Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="AD_Grid_Row">
+  <Table>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Name</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Version</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Description</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Help</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">GridName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ReadOnly</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">AllowDelete</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Visible</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">DetailGridReadOnly</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">IsActive</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">CreatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Created</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">UpdatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Updated</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ClientId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">OrgId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">BackColor</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ForeColor</ss:Data></ss:Cell>
+   </ss:Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="AD_Grid_Cell">
+  <Table>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Name</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Version</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Description</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Help</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">GridName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">FullPropertyName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ReadOnly</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">NotNull</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">IsActive</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">CreatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Created</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">UpdatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Updated</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ClientId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">OrgId</ss:Data></ss:Cell>
+   </ss:Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="AD_Grid_Related">
+  <Table>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Name</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Version</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Description</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Help</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Text</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">GridName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Action</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SeqNo</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Visible</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">RelatedType</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SearchExpression</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">EntityType</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">IsActive</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">CreatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Created</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">UpdatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Updated</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ClientId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">OrgId</ss:Data></ss:Cell>
+   </ss:Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="AD_Grid_Group">
+  <Table>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Name</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Version</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">GridName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">GroupBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">TitleFormat</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SeqNo</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Help</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Description</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ClientId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">OrgId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">IsActive</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Collapsed</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">CreatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Created</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">UpdatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Updated</ss:Data></ss:Cell>
+   </ss:Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="AD_Grid_Filter">
+  <Table>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Name</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Version</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Description</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Help</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Text</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">GridName</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">RowExpression</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ColumnExpression</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">SeqNo</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">IsActive</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">CreatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Created</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">UpdatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Updated</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ClientId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">OrgId</ss:Data></ss:Cell>
+   </ss:Row>
+  </Table>
+ </Worksheet>
+</Workbook>

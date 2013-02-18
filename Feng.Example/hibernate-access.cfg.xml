@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="hibernate-configuration" type="NHibernate.Cfg.ConfigurationSectionHandler,NHibernate" />
+  </configSections>
+  <hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+    <session-factory name ="Access">
+      <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
+      <property name="dialect">NHibernate.JetDriver.JetDialect, NHibernate.JetDriver</property>
+      <property name="connection.driver_class">NHibernate.JetDriver.JetDriver, NHibernate.JetDriver</property>
+      <property name="connection.connection_string">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=.\Data\Global\buffer.mdb</property>
+      <property name="adonet.batch_size">10</property>
+      <property name="show_sql">false</property>
+      <property name="query.substitutions">true 1, false 0, yes 'Y', no 'N'</property>
+
+      <property name="proxyfactory.factory_class">NHibernate.ByteCode.Castle.ProxyFactoryFactory, NHibernate.ByteCode.Castle</property>
+
+      <mapping resource="Feng.Windows.Feng.Windows.hbm.xml" assembly="Feng.Windows" />
+    </session-factory>
+  </hibernate-configuration>
+
+</configuration>

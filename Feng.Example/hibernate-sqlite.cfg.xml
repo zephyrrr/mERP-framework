@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="hibernate-configuration" type="NHibernate.Cfg.ConfigurationSectionHandler,NHibernate" />
+  </configSections>
+  <hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+    <session-factory name ="sqlite">
+      <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
+      <property name="dialect">NHibernate.Dialect.SQLiteDialect</property>
+      <property name="connection.driver_class">NHibernate.Driver.SQLite20Driver</property>
+      <property name="connection.connection_string_name">LocalConnectionString</property>
+      <property name="cache.provider_class">NHibernate.Cache.HashtableCacheProvider, NHibernate</property>
+    <property name="cache.use_second_level_cache">true</property>
+    <property name="cache.use_query_cache">true</property>
+    <property name="connection.isolation">ReadCommitted</property>
+    <property name="proxyfactory.factory_class">Feng.NH.ByteCode.CacheCastle.ProxyFactoryFactory, Feng.NH.ByteCode.CacheCastle</property>
+    <property name="sql_exception_converter">Feng.NH.MsSqlExceptionConverter, Feng.NH</property>
+
+    <property name="show_sql">false</property>
+    <property name="generate_statistics">false</property>
+      <property name="query.substitutions">True 1, False 0</property>
+
+      <mapping resource="Feng.Domain.hbm.xml" assembly="Feng.Application" />
+    </session-factory>
+  </hibernate-configuration>
+<!-- Valid parameters:
+Data Source=<database file>  (required)
+Version=<version of SQLite (2 or 3)>  (default: 2)
+New=True|False  (default: False)
+Compress=True|False  (default: False)
+UTF8Encoding=True|False  (default: False)
+UTF16Encoding=True|False  (default: False)
+Cache Size=<N>  (default: 2000)
+Synchronous=Full|Normal|Off  (default: Normal)
+DateTimeFormat=ISO8601|Ticks|CurrentCulture  (default: ISO8601)
+Compatibility=[old-date-format][,old-binary-format] (default: None) 
+-->
+
+</configuration>

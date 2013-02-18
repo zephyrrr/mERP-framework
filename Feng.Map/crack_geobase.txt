@@ -1,0 +1,62 @@
+1. ildasm.exe ./geobase.net.dll /out:./geobase.net.il
+2. Change code:
+1)
+private static void x73f5727ea1b8dc4e(int x77f28745d2785688)
+		{
+			GeoBaseLicense obj;
+			Monitor.Enter(obj = GeoBaseLicense.x9834ddb0e0bd5996);
+			try
+			{
+				GeoBaseLicense.x82d7e463244028bf();
+				GeoBaseLicense.x522313dd71297aee(x77f28745d2785688);
+				GeoBaseLicense.x75f2c4c5898db7d9(x77f28745d2785688);
+			}
+			finally
+			{
+				Monitor.Exit(obj);
+			}
+		}
+=========================>
+.method private hidebysig static void  x73f5727ea1b8dc4e(int32 x77f28745d2785688) cil managed
+  {
+ //GeoBaseLicense.xd4577ce845bddb73();
+
+    // 代码大小       39 (0x27)
+    //IL_0000:  call       void Telogis.GeoBase.Internal.GeoBaseLicense::xd4577ce845bddb73()
+    IL_0000:  ldstr      "{0} {1}, Telogis"
+    IL_0005:  stsfld     string Telogis.GeoBase.Internal.GeoBaseLicense::x4823b421b09c73fd
+    IL_000a:  ret
+  } // end of method GeoBaseLicense::x73f5727ea1b8dc4e
+
+
+2)
+private static bool x5e8b631ead3f300d(GeoBaseLicense.x172b6928019f0025 xf7670e426cf9a8f4, GeoBaseLicense.x172b6928019f0025 x40f33a1b6dc84efd)
+		{
+			return (xf7670e426cf9a8f4 & x40f33a1b6dc84efd) != GeoBaseLicense.x172b6928019f0025.x4d0b9d4447ba7566;
+		}
+========>
+.method private hidebysig static bool  x5e8b631ead3f300d(valuetype Telogis.GeoBase.Internal.GeoBaseLicense/x172b6928019f0025 xf7670e426cf9a8f4,
+                                                           valuetype Telogis.GeoBase.Internal.GeoBaseLicense/x172b6928019f0025 x40f33a1b6dc84efd) cil managed
+  {
+    // 代码大小       2 (0x2)
+    .maxstack  8
+    IL_0000:  ldc.i4.1
+    IL_0001:  ret
+  } // end of method GeoBaseLicense::x5e8b631ead3f300d
+
+3)
+remove   .custom instance void [mscorlib]System.Security.AllowPartiallyTrustedCallersAttribute::.ctor() = ( 01 00 00 00 ) 
+
+4) 
+.class private
+-> .class public
+
+.method assembly
+-> .method public
+
+.field assembly
+-> .field public
+
+3. ilasm ./geobase.net.il /dll /key=./Feng.snk /resource:./geobase.net.res /out:./geobase.net.dll
+c:\Windows\Microsoft.NET\Framework\v2.0.50727\ilasm ./geobase.net.il /dll /key=./Feng.snk /resource:./geobase.net.res /out:./geobase.net.dll
+c:\Windows\Microsoft.NET\Framework\v2.0.50727\ilasm ./geobase.net.il /dll /resource:./geobase.net.res /out:./nosign/geobase.net.dll

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0"?>
+<project name="Feng.Base" default="build">
+<property name="basename" value="Feng.Base" /> 
+<property name="debug" value="true" /> 
+<property name="build.dir" value="../Reference" /> 
+<target name="clean" description="cleans build directory">
+  <delete failonerror="false">
+  <fileset>
+    <include name="${build.dir}/${basename}.dll" /> 
+    <include name="${build.dir}/${basename}.pdb" />
+    <include name="${build.dir}/${basename}.xml" />
+  </fileset>
+  </delete>
+</target>
+<target name="debug">
+  <call target="build" />
+</target>
+<target name="release">
+  <property name="debug" value="false" /> 
+  <property name="build.dir" value="../Reference" />
+  <call target="build" />
+</target>
+<target name="build">
+  <mkdir dir="${build.dir}" /> 
+  <csc target="library" output="${build.dir}/${basename}.dll" debug="${debug}" doc="${build.dir}/${basename}.xml">
+  <sources>
+    <include name="*.cs" />
+    <include name="Properties/*.cs" />
+	  <include name="Error\*.cs" />
+	  <include name="NH\*.cs" /> 
+  </sources>
+  <references>
+    <lib>
+         <include name="..\Support" />
+    </lib>
+    <include name="System.dll" /> 
+    <include name="System.Data.dll" /> 
+    <include name="System.Drawing.dll" /> 
+    <include name="System.configuration" />
+    <include name="System.Windows.Forms.dll" /> 
+    <include name="System.Design.dll" />
+    <include name="System.XML.dll" />
+	  <include name="System.Transaction.dll" />
+	  <include name="System.Web.dll" />
+	  <include name="System.Deployment.dll" />
+	  <include name="Castle.DynamicProxy.dll" />
+	  <include name="ChnCharInfo.dll" />
+	  <include name="log4net.dll" />
+	  <include name="NHibernate.dll" />
+	  <include name="NHibernate.Mapping.Attributes.dll" />
+	  <include name="Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <include name="Microsoft.Practices.EnterpriseLibrary.Data.dll" /> 
+	  <include name="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" /> 
+  </references>
+  </csc>
+</target>
+</project>

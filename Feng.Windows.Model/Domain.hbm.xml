@@ -1,0 +1,1075 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Feng" assembly="Feng.Windows.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Feng.WindowInfo" table="AD_Window" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Text" length="100" not-null="true" />
+    <property name="WindowType" not-null="true" />
+    <property name="ImageName" length="100" not-null="false" />
+    <property name="Access" length="100" not-null="true" />
+    <property name="GenerateDetailForm" not-null="true" />
+    <property name="EventInitialized" column="EventInitialized" not-null="false" />
+    <property name="AttachmentId" column="AttachmentId" not-null="false" />
+    <property name="WindowState" not-null="false" />
+    <property name="ShowMenu" not-null="false" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="DetailForm" foreign-key="FK_Window_Detail_Form" />
+    <many-to-one name="DetailWindow" foreign-key="FK_Window_Detail_Window" />
+    <many-to-one name="AutoProcess" not-null="false" foreign-key="FK_Window_Process" />
+    <bag name="WindowTabs" inverse="true" cascade="none" order-by="SeqNo">
+      <key column="Window" />
+      <one-to-many class="Feng.WindowTabInfo, Feng.Windows.Model" not-found="ignore" />
+    </bag>
+    <bag name="WindowMenus" inverse="true" cascade="none" order-by="SeqNo">
+      <key column="Window" />
+      <one-to-many class="Feng.WindowTabInfo, Feng.Windows.Model" not-found="ignore" />
+    </bag>
+  </class>
+  <class name="Feng.ServerTaskScheduleInfo" table="AD_Server_TaskSchedule" optimistic-lock="version">
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Schedule" length="100" not-null="true" />
+    <property name="StartAtStart" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="Process" foreign-key="FK_ServerTaskScheduleInfo_Process" />
+  </class>
+  <class name="Feng.OrganizationInfo" table="AD_Org" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Id">
+      <generator class="identity" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="LoginRoleName" length="200" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.GridGroupInfo" table="AD_Grid_Group" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="GridName" length="100" not-null="true" />
+    <property name="GroupBy" length="100" not-null="true" />
+    <property name="TitleFormat" length="255" not-null="true" />
+    <property name="SeqNo" not-null="true" />
+    <property name="Collapsed" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.GridColumnWarningInfo" table="AD_Grid_Column_Warning" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="GroupName" length="100" not-null="true" />
+    <property name="Text" length="100" not-null="true" />
+    <property name="SeqNo" not-null="true" />
+    <property name="Visible" length="255" not-null="true" />
+    <property name="ImageName" length="100" not-null="true" />
+    <property name="Expression" length="1000" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.ReportInfo" table="AD_Report" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="ReportDocument" length="100" not-null="true" />
+    <property name="DatasetName" length="100" not-null="false" />
+    <property name="SearchExpression" length="50" not-null="false" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="AfterProcess" foreign-key="FK_Report_Process" />
+    <one-to-one name="Window" cascade="none" constrained="false" foreign-key="FK_Report_Window" />
+    <bag name="WindowMenus" inverse="true" cascade="none" order-by="SeqNo">
+      <key column="Report" />
+      <one-to-many class="Feng.ReportDataInfo, Feng.Windows.Model" not-found="ignore" />
+    </bag>
+  </class>
+  <class name="Feng.MonthReportInfo" table="SD_Month_Report" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="identity" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="报表日期起" not-null="true" />
+    <property name="报表日期止" not-null="true" />
+    <property name="报表日期" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <bag name="Reports" inverse="true" cascade="none">
+      <key column="MonthReport" />
+      <one-to-many class="Feng.MonthReportDataInfo, Feng.Windows.Model" not-found="ignore" />
+    </bag>
+  </class>
+  <class name="Feng.ModuleDependencyInfo" table="AD_Module_Dependency" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="StartVersion" length="10" not-null="true" />
+    <property name="EndVersion" length="10" not-null="false" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="Module" foreign-key="FK_ModuleDependency_Module" />
+    <many-to-one name="DependentModule" foreign-key="FK_ModuleDependency_DependentModule" />
+  </class>
+  <class name="Feng.GridInfo" table="AD_Grid" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="GridName" length="100" not-null="true" />
+    <property name="AllowInsert" length="255" not-null="true" />
+    <property name="AllowEdit" length="255" not-null="true" />
+    <property name="AllowDelete" length="255" not-null="true" />
+    <property name="AllowOperationInsert" length="255" not-null="true" />
+    <property name="AllowOperationEdit" length="255" not-null="true" />
+    <property name="AllowOperationDelete" length="255" not-null="true" />
+    <property name="AllowExcelOperation" length="255" not-null="false" />
+    <property name="AllowInnerInsert" length="255" />
+    <property name="AllowInnerEdit" length="255" />
+    <property name="AllowInnerDelete" length="255" />
+    <property name="StatTitle" length="255" />
+    <property name="ReadOnly" length="255" />
+    <property name="Visible" length="255" not-null="true" />
+    <property name="VisibleAsDetail" length="255" not-null="false" />
+    <property name="AllowInnerSearch" length="255" not-null="false" />
+    <property name="AllowInnerFilter" length="255" not-null="false" />
+    <property name="AllowInnerMenu" length="255" not-null="false" />
+    <property name="AllowInnerTextFilter" length="255" not-null="false" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.PluginInfo" table="AD_Plugin" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Permission" length="255" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="Process" foreign-key="FK_Plugin_Process" />
+  </class>
+  <class name="Feng.CustomSearchInfo" table="AD_Search_Custom" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="GroupName" length="100" not-null="false" />
+    <property name="Text" length="100" not-null="true" />
+    <property name="SearchExpression" length="255" not-null="true" />
+    <property name="SeqNo" not-null="true" />
+    <property name="Visible" length="100" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.ClientInfo" table="AD_Client" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Id">
+      <generator class="identity" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Name" length="200" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.ReportDataInfo" table="AD_Report_Data" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="DatasetTableName" length="50" not-null="true" />
+    <property name="SearchManagerClassName" length="255" not-null="true" />
+    <property name="SearchManagerClassParams" length="2000" not-null="false" />
+    <property name="GridName" length="100" not-null="true" />
+    <property name="SeqNo" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="Report" foreign-key="FK_ReportData_Report" />
+  </class>
+  <class name="Feng.ActionInfo" table="AD_Action" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="ActionType" not-null="true" />
+    <property name="Access" length="100" not-null="false" />
+    <property name="WebAddress" length="255" not-null="false" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="Window" foreign-key="FK_Menu_Window" />
+    <many-to-one name="Process" foreign-key="FK_Menu_Process" />
+    <many-to-one name="Form" foreign-key="FK_Menu_Form" />
+  </class>
+  <class name="Feng.NameValueMappingInfo" table="AD_NameValueMapping" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="TableName" length="100" not-null="true" />
+    <property name="ValueMember" length="100" not-null="true" />
+    <property name="DisplayMember" length="100" not-null="true" />
+    <property name="OtherMembers" length="255" not-null="false" />
+    <property name="WhereClause" length="255" not-null="false" />
+    <property name="MemberVisible" length="255" not-null="false" />
+    <property name="ParentName" length="100" not-null="false" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="EditAction" foreign-key="FK_NameValueMapping_Action" />
+  </class>
+  <class name="Feng.ModuleByClientInfo" table="AD_Module_Client" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="Module" foreign-key="FK_ModuleByClient_Module" />
+    <many-to-one name="ModuleByClient" foreign-key="FK_ModuleByClient_Client" />
+  </class>
+  <class name="Feng.GridRelatedInfo" table="AD_Grid_Related" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Text" length="100" not-null="true" />
+    <property name="GridName" length="100" not-null="true" />
+    <property name="SeqNo" not-null="true" />
+    <property name="Visible" length="255" not-null="false" />
+    <property name="RelatedType" not-null="true" />
+    <property name="SearchExpression" length="100" not-null="true" />
+    <property name="GridLevel" not-null="false" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="Action" foreign-key="FK_GridRelated_Action" />
+  </class>
+  <class name="Feng.GridCellInfo" table="AD_Grid_Cell" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="GridName" length="100" not-null="true" />
+    <property name="GridColumName" column="FullPropertyName" length="255" not-null="true" />
+    <property name="ReadOnly" length="255" not-null="true" />
+    <property name="NotNull" length="255" not-null="true" />
+    <property name="BackColor" length="255" not-null="false" />
+    <property name="ForeColor" length="255" not-null="false" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.WebServiceInfo" table="AD_Web_Service" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="RestAddress" length="50" not-null="false" />
+    <property name="SoapAddress" length="50" not-null="false" />
+    <property name="ExecuteParam" length="50" not-null="false" />
+    <property name="Type" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.TaskInfo" table="AD_Task" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="GroupName" length="100" not-null="true" />
+    <property name="Text" length="100" not-null="true" />
+    <property name="SearchManagerClassName" length="255" not-null="true" />
+    <property name="SearchManagerClassParams" length="2000" not-null="false" />
+    <property name="SearchExpression" length="200" not-null="true" />
+    <property name="SeqNo" not-null="true" />
+    <property name="Visible" length="100" not-null="true" />
+    <property name="ParentName" length="100" not-null="true" />
+    <property name="TaskType" not-null="true" />
+    <property name="Level" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="Action" not-null="true" foreign-key="FK_Task_Action" />
+  </class>
+  <class name="Feng.RoleInfo" table="AD_Role" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="ClientList" length="2000" not-null="true" />
+    <property name="OrgList" length="2000" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.MonthReportDataInfo" table="SD_Month_Report_Data" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="identity" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Name" length="100" not-null="true" />
+    <property name="Data" length="2147483647" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="MonthReport" not-null="true" foreign-key="FK_MonthReportData_MonthReport" />
+  </class>
+  <class name="Feng.GridRowInfo" table="AD_Grid_Row" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="GridName" length="100" not-null="true" />
+    <property name="ReadOnly" length="500" not-null="false" />
+    <property name="AllowDelete" length="500" not-null="false" />
+    <property name="AllowEdit" length="500" not-null="false" />
+    <property name="Visible" length="255" not-null="false" />
+    <property name="DetailGridReadOnly" length="500" not-null="false" />
+    <property name="DetailGridAllowInsert" length="500" not-null="false" />
+    <property name="BackColor" length="255" not-null="false" />
+    <property name="ForeColor" length="255" not-null="false" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.CommandBindingInfo" table="AD_Command_Binding" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="Command" not-null="true" foreign-key="FK_CommandBinding_Process" />
+  </class>
+  <class name="Feng.WindowSelectInfo" table="AD_Window_Select" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Text" length="50" not-null="true" />
+    <property name="GroupName" length="100" not-null="true" />
+    <property name="Visible" length="255" not-null="true" />
+    <property name="SeqNo" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="Window" foreign-key="FK_WindowSelect_Window" />
+    <many-to-one name="Form" foreign-key="FK_WindowSelect_Form" />
+  </class>
+  <class name="Feng.MenuInfo" table="AD_Menu" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Text" length="100" not-null="true" />
+    <property name="ImageName" length="100" not-null="false" />
+    <property name="AsDialog" not-null="true" />
+    <property name="SeqNo" not-null="true" />
+    <property name="Visible" length="100" not-null="false" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="Action" foreign-key="FK_Menu_Action" />
+    <many-to-one name="ParentMenu" foreign-key="FK_Menu_Parent" />
+    <bag name="ChildMenus" inverse="true" cascade="none" order-by="SeqNo">
+      <key column="ParentMenu" />
+      <one-to-many class="Feng.MenuInfo, Feng.Windows.Model" not-found="ignore" />
+    </bag>
+  </class>
+  <class name="Feng.WindowMenuInfo" table="AD_Window_Menu" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Text" length="100" not-null="true" />
+    <property name="ImageName" length="100" not-null="false" />
+    <property name="SeqNo" not-null="true" />
+    <property name="Type" not-null="true" />
+    <property name="ExecuteParam" length="50" not-null="false" />
+    <property name="InMasterWindow" not-null="true" />
+    <property name="Enable" length="200" not-null="true" />
+    <property name="EnableState" length="100" not-null="true" />
+    <property name="Visible" length="200" not-null="true" />
+    <property name="OriginalName" length="50" not-null="false" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="Window" foreign-key="FK_WindowMenu_Window" />
+  </class>
+  <class name="Feng.AttachmentInfo" table="SD_Attachment" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Id">
+      <generator class="identity" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="EntityName" length="255" not-null="true" />
+    <property name="EntityId" length="255" not-null="true" />
+    <property name="Description" length="50" not-null="true" />
+    <property name="FileName" length="50" not-null="true" />
+    <property name="Data" length="2147483647" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.AlertRuleInfo" table="AD_AlertRule" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Sql" length="2000" not-null="false" />
+    <property name="RecipientUser" length="255" not-null="false" />
+    <property name="RecipientRole" length="255" not-null="false" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.AuditLogRecord" table="SD_AuditLogRecord">
+    <id name="ID" column="Id">
+      <generator class="identity" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="LogType" length="50" not-null="true" />
+    <property name="EntityName" length="255" not-null="false" />
+    <property name="EntityId" length="255" not-null="false" />
+    <property name="Message" length="4000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.SimpleParamInfo" table="AD_SimpleParam" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Value" length="255" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.ResourceDependencyInfo" table="AD_Resource_Dependency" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="ResourceName" length="255" not-null="true" />
+    <property name="DependentResourceName" length="255" not-null="true" />
+    <property name="SeqNo" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.AlertInfo" table="SD_Alert" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="identity" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Description" length="255" not-null="false" />
+    <property name="RecipientUser" length="100" not-null="false" />
+    <property name="RecipientRole" length="100" not-null="false" />
+    <property name="SearchExpression" length="200" not-null="true" />
+    <property name="IsFixed" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="Action" foreign-key="FK_AlertInfo_Action" />
+  </class>
+  <class name="Feng.ModuleIncludeInfo" table="AD_Module_Include" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="ModuleIncludeType" not-null="true" />
+    <property name="Params" length="255" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="Module" foreign-key="FK_ModuleInclude_Module" />
+  </class>
+  <class name="Feng.ModuleByOrgInfo" table="AD_Module_Org" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="Module" foreign-key="FK_ModuleByOrg_Module" />
+    <many-to-one name="ModuleByOrg" foreign-key="FK_ModuleByOrg_Org" />
+  </class>
+  <class name="Feng.WindowTabInfo" table="AD_Window_Tab" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Text" length="100" not-null="true" />
+    <property name="IsInGrid" not-null="true" />
+    <property name="IsInDetailForm" not-null="true" />
+    <property name="SeqNo" not-null="true" />
+    <property name="WhereClause" length="255" not-null="false" />
+    <property name="OrderByClause" length="255" not-null="false" />
+    <property name="ModelClassName" length="255" not-null="false" />
+    <property name="ControlManagerClassName" length="255" not-null="false" />
+    <property name="DisplayManagerClassName" length="255" not-null="false" />
+    <property name="SearchManagerClassName" length="255" not-null="true" />
+    <property name="SearchManagerClassParams" length="2000" not-null="false" />
+    <property name="BusinessLayerClassName" length="255" not-null="false" />
+    <property name="BusinessLayerClassParams" length="2000" not-null="false" />
+    <property name="RepositoryConfigName" length="50" not-null="false" />
+    <property name="GridName" length="100" not-null="true" />
+    <property name="SelectedDataValueChanged" length="50" not-null="false" />
+    <property name="PositionChanged" length="50" not-null="false" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="Parent" foreign-key="FK_Tab_Parent" />
+    <many-to-one name="Window" foreign-key="FK_TAB_WINDOW" />
+    <bag name="ChildTabs" inverse="true" cascade="none" order-by="SeqNo">
+      <key column="Parent" />
+      <one-to-many class="Feng.WindowTabInfo, Feng.Windows.Model" not-found="ignore" />
+    </bag>
+  </class>
+  <class name="Feng.ProcessInfo" table="AD_Process" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Type" not-null="true" />
+    <property name="ExecuteParam" length="4000" not-null="true" />
+    <property name="Access" length="100" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="Parent" foreign-key="FK_Process_Parent" />
+  </class>
+  <class name="Feng.GridRelatedAddressInfo" table="AD_Grid_Related_Address" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Text" length="100" not-null="true" />
+    <property name="GridName" length="100" not-null="true" />
+    <property name="SeqNo" not-null="true" />
+    <property name="Visible" length="255" not-null="false" />
+    <property name="RelatedType" not-null="true" />
+    <property name="SearchExpression" length="100" not-null="true" />
+    <property name="GridLevel" not-null="true" />
+    <property name="Address" length="255" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.EventProcessInfo" table="AD_EventProcess" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="EventName" length="50" not-null="true" />
+    <property name="Type" not-null="true" />
+    <property name="ExecuteParam" length="100" not-null="false" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.EntityBufferInfo" table="AD_EntityBuffer" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="EntityName" length="255" not-null="false" />
+    <property name="PersistentClass" length="255" not-null="true" />
+    <property name="IdTypeName" length="255" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.WindowTabEventInfo" table="AD_Window_Tab_Event" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="ManagerType" not-null="true" />
+    <property name="EventName" length="50" not-null="true" />
+    <property name="EventProcessName" length="50" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="ParentWindowTab" foreign-key="FK_Window_Tab_Event_Parent" />
+  </class>
+  <class name="Feng.ModuleInfo" table="AD_Module" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Author" length="50" not-null="true" />
+    <property name="ModuleVersion" length="10" not-null="true" />
+    <property name="ModuleData" length="2147483647" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <bag name="Include" inverse="true" cascade="none">
+      <key column="Module" />
+      <one-to-many class="Feng.ModuleIncludeInfo, Feng.Windows.Model" not-found="ignore" />
+    </bag>
+  </class>
+  <class name="Feng.UserConfigurationInfo" table="SD_User_Configuration" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="identity" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="UserName" length="100" not-null="true" unique="true" />
+    <property name="UserData" length="2147483647" not-null="false" lazy="true" />
+    <property name="StartForm" length="100" not-null="false" />
+    <property name="UserDataLength" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.ParamCreatorInfo" table="AD_Param_Creator" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="ParamName" length="50" not-null="true" />
+    <property name="ParamValue" length="255" not-null="true" />
+    <property name="Type" length="255" not-null="true" />
+    <property name="Permission" length="50" not-null="true" />
+    <property name="SeqNo" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.GridColumnInfo" table="AD_Grid_Column" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="GridName" length="100" not-null="true" />
+    <property name="Navigator" length="100" not-null="false" />
+    <property name="PropertyName" length="4000" not-null="false" />
+    <property name="TypeName" column="Type" length="100" not-null="true" />
+    <property name="Caption" length="100" not-null="false" />
+    <property name="GroupCaption" length="100" not-null="false" />
+    <property name="SeqNo" not-null="true" />
+    <property name="ReadOnly" length="255" not-null="true" />
+    <property name="ColumnVisible" length="255" not-null="true" />
+    <property name="NotNull" length="255" not-null="true" />
+    <property name="ValidRegularExpression" length="255" not-null="false" />
+    <property name="ValidErrorMessage" length="255" not-null="false" />
+    <property name="ValidScript" length="4000" not-null="false" />
+    <property name="GridColumnType" not-null="true" />
+    <property name="SpecialGridColumnName" column="GridColumnName" length="100" not-null="false" />
+    <property name="CellViewerManager" length="100" not-null="false" />
+    <property name="CellViewerManagerParam" length="100" not-null="false" />
+    <property name="CellEditorManager" length="100" not-null="false" />
+    <property name="CellEditorManagerParam" length="100" not-null="false" />
+    <property name="AllowSetList" not-null="false" />
+    <property name="EnableCopy" not-null="false" />
+    <property name="EnableSelectAll" not-null="false" />
+    <property name="StatFunction" length="100" not-null="false" />
+    <property name="StatTitle" length="255" not-null="false" />
+    <property name="BackColor" length="100" not-null="false" />
+    <property name="ForeColor" length="100" not-null="false" />
+    <property name="FontName" length="100" not-null="false" />
+    <property name="FontSize" not-null="false" />
+    <property name="HorizontalAlignment" not-null="false" />
+    <property name="SortDirection" not-null="false" />
+    <property name="ColumnMaxWidth" not-null="false" />
+    <property name="ColumnFixed" not-null="false" />
+    <property name="ParentPropertyName" length="100" not-null="false" />
+    <property name="DataControlVisible" length="255" not-null="false" />
+    <property name="SearchControlVisible" length="255" not-null="false" />
+    <property name="SearchControlFullPropertyName" length="100" not-null="false" />
+    <property name="SearchControlInitParamFilter" column="ControlInitParamFilter" length="255" not-null="false" />
+    <property name="SearchControlAdditionalSearchExpression" length="100" not-null="false" />
+    <property name="DataControlType" length="100" not-null="false" />
+    <property name="SearchControlType" length="100" not-null="false" />
+    <property name="SearchControlInitParam" length="255" not-null="false" />
+    <property name="DataControlDefaultValue" length="400" not-null="false" />
+    <property name="SearchControlDefaultValue" length="400" not-null="false" />
+    <property name="SearchNullUseFull" not-null="true" />
+    <property name="SearchControlDefaultOrder" length="255" not-null="false" />
+    <property name="CellEditorManagerParamFilter" length="255" not-null="false" />
+    <property name="DoubleClick" length="50" not-null="false" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.ResourceInfo" table="AD_Resource" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="ResourceType" not-null="true" />
+    <property name="ResourceName" length="255" not-null="true" unique="true" />
+    <property name="Content" length="2147483647" not-null="true" />
+    <property name="Md5" length="255" not-null="true" />
+    <property name="PersistLocal" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.GridFilterInfo" table="AD_Grid_Filter" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Text" length="50" not-null="true" />
+    <property name="GridName" length="100" not-null="true" />
+    <property name="RowExpression" length="255" not-null="false" />
+    <property name="ColumnExpression" length="255" not-null="false" />
+    <property name="SeqNo" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Feng.FormInfo" table="AD_Form" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Text" length="100" not-null="true" />
+    <property name="ImageName" length="100" not-null="false" />
+    <property name="ClassName" length="255" not-null="true" />
+    <property name="Params" length="255" not-null="false" />
+    <property name="Access" length="100" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+</hibernate-mapping>

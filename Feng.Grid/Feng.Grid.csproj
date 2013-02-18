@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E24BD401-38B8-410D-90A8-2C1AB0F94C3F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Feng</RootNamespace>
+    <AssemblyName>Feng.Grid</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SourceAnalysisOverrideSettingsFile>C:\Documents and Settings\Administrator\Application Data\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\Common\Feng.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>False</DelaySign>
+    <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Reference\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Reference\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AMS.Profile" />
+    <Reference Include="Feng.Base" />
+    <Reference Include="Feng.Data" />
+    <Reference Include="Feng.Security" />
+    <Reference Include="Feng.View" />
+    <Reference Include="Feng.Windows" />
+    <Reference Include="Feng.Windows.Forms" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xceed.DockingWindows.v2.2" />
+    <Reference Include="Xceed.Editors.v2.6" />
+    <Reference Include="Xceed.Grid.v3.9" />
+    <Reference Include="Xceed.Grid.Reporting.v3.9" />
+    <Reference Include="Xceed.SmartUI.Controls.v3.6" />
+    <Reference Include="Xceed.SmartUI.v3.6" />
+    <Reference Include="Xceed.UI.v1.4" />
+    <Reference Include="Xceed.Validation.v1.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Common\VersionAssemblyInfo.cs">
+      <Link>Properties\VersionAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Grid\AndValidCriterion.cs" />
+    <Compile Include="Grid\Columns\ButtonColumn.cs" />
+    <Compile Include="Grid\Columns\ButtonDataCell.cs" />
+    <Compile Include="Grid\Columns\ButtonDataRow.cs" />
+    <Compile Include="Grid\Columns\CheckColumn.cs">
+    </Compile>
+    <Compile Include="Grid\Columns\CheckColumnHelper.cs" />
+    <Compile Include="Grid\Columns\CheckColumnHelper.Designer.cs">
+      <DependentUpon>CheckColumnHelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grid\Columns\MyColumn.cs" />
+    <Compile Include="Grid\Comparer\ComboComparer.cs" />
+    <Compile Include="Grid\Comparer\IntMultiImageComparer.cs" />
+    <Compile Include="Grid\DataGrid.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Grid\DetailFilterGrid.cs">
+    </Compile>
+    <Compile Include="Grid\DropdownOptionGrid.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Grid\Editors\ButtonEditor.cs" />
+    <Compile Include="Grid\Editors\DateEditor.cs" />
+    <Compile Include="Grid\Editors\DateTimeEditor.cs" />
+    <Compile Include="Grid\Editors\MultiLineEditor.cs" />
+    <Compile Include="Grid\Editors\MyComboBoxEditor.cs" />
+    <Compile Include="Grid\Editors\MyFreeComboBoxEditor.cs" />
+    <Compile Include="Grid\Editors\MyMaskTextEditor.cs" />
+    <Compile Include="Grid\Editors\MyNumericEditor.cs" />
+    <Compile Include="Grid\Editors\MyOptionPickerEditor.cs" />
+    <Compile Include="Grid\Editors\MyTextEditor.cs" />
+    <Compile Include="Grid\Editors\StarRatingEditor.cs" />
+    <Compile Include="Grid\GridDataGragEventArgs.cs" />
+    <Compile Include="Grid\GridHelper.Designer.cs">
+      <DependentUpon>GridHelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grid\GridSetting.cs" />
+    <Compile Include="Grid\Comparer\MultiComboComparer.cs" />
+    <Compile Include="Grid\MultiColumnHeaderColumnManagerRow.cs" />
+    <Compile Include="Grid\MyExcelGrid.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Grid\MyExcelGrid.Designer.cs">
+      <DependentUpon>MyExcelGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grid\NumberedRow.cs" />
+    <Compile Include="Grid\NumberedRowSelector.cs" />
+    <Compile Include="Grid\ScriptCriterion.cs" />
+    <Compile Include="Grid\SpaceDataRow.cs" />
+    <Compile Include="Grid\TextFilter\FilterCell.cs" />
+    <Compile Include="Grid\TextFilter\FilterRow.cs" />
+    <Compile Include="Grid\TextFilter\FilterRowSelector.cs" />
+    <Compile Include="Grid\Viewers\BoolImageViewer.cs" />
+    <Compile Include="Grid\Viewers\BoolTextViewer.cs" />
+    <Compile Include="Grid\Viewers\EnableTextViewer.cs" />
+    <Compile Include="Grid\Viewers\IntImageTextViewer.cs" />
+    <Compile Include="Grid\Viewers\IntMultiImageViewer.cs" />
+    <Compile Include="Grid\Viewers\MultiColorTextViewer.cs" />
+    <Compile Include="Grid\Viewers\MyComboBoxViewer.cs" />
+    <Compile Include="Grid\Viewers\StartSopActionViewer.cs" />
+    <Compile Include="Windows\Forms\FilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\FilterForm.Designer.cs">
+      <DependentUpon>FilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grid\FilterGrid.cs">
+    </Compile>
+    <Compile Include="Grid\FilterGrid.Designer.cs">
+      <DependentUpon>FilterGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grid\FilterSumGrid.cs">
+    </Compile>
+    <Compile Include="Grid\Filter\AnyFilter.cs" />
+    <Compile Include="Grid\Filter\ComparisonFilter.cs" />
+    <Compile Include="Grid\Filter\FilterCell.cs" />
+    <Compile Include="Grid\Filter\FilterRow.cs" />
+    <Compile Include="Grid\Filter\FilterRowSelector.cs" />
+    <Compile Include="Grid\Filter\FormCustomFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grid\Filter\FormCustomFilter.Designer.cs">
+      <DependentUpon>FormCustomFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grid\Filter\IFilter.cs" />
+    <Compile Include="Grid\Filter\LogicalFilter.cs" />
+    <Compile Include="Grid\GridExtention.cs" />
+    <Compile Include="Grid\GridHelper.cs">
+    </Compile>
+    <Compile Include="Grid\IGrid.cs" />
+    <Compile Include="Grid\MaxLengthFieldCriterion.cs" />
+    <Compile Include="Grid\MergedDataCell.cs" />
+    <Compile Include="Grid\MyGroupManageRow.cs" />
+    <Compile Include="Grid\MyDetailGrid.cs" />
+    <Compile Include="Grid\MyGrid.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Grid\MyGroupByRow.cs" />
+    <Compile Include="Grid\MyRegularExpressionCriterion.cs" />
+    <Compile Include="Grid\Print\CustomizeReportStyleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grid\Print\GenerateReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grid\Print\HeaderFooterEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grid\Print\IPrintable.cs" />
+    <Compile Include="Grid\Print\MyGridExportSaveFileDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Grid\Print\MyGridExportSaveFileDialog.Designer.cs">
+      <DependentUpon>MyGridExportSaveFileDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grid\Print\MyGridPrintDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Grid\Print\PrintableTextBox.cs" />
+    <Compile Include="Grid\Print\PrintPreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grid\Print\ReportPreviewControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Grid\RequiredFieldCriterion.cs" />
+    <Compile Include="Windows\Forms\StyleSheetCombo.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Grid\Viewers\ButtonViewer.cs" />
+    <Compile Include="Grid\Viewers\DateViewer.cs" />
+    <Compile Include="Grid\Viewers\DetailSummaryRowViewer.cs" />
+    <Compile Include="Grid\Viewers\IntImageViewer.cs" />
+    <Compile Include="Grid\Viewers\ImageTextViewer.cs" />
+    <Compile Include="Grid\Viewers\MultiLineViewer.cs" />
+    <Compile Include="Grid\Viewers\MyOptionPickerViewer.cs" />
+    <Compile Include="Grid\Viewers\NumericViewer.cs" />
+    <Compile Include="Grid\Viewers\TrackingViewer.cs" />
+    <Compile Include="Windows\Forms\MyOptionPicker.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\MyOptionPicker.Designer.cs">
+      <DependentUpon>MyOptionPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\MyComboBox.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\MyFreeComboBox.cs">
+      <SubType>Control</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Grid\Filter\FilterApplied16by24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Grid\Filter\FilterUnApplied16by24.png" />
+    <EmbeddedResource Include="Grid\Print\CustomizeReportStyleForm.resx">
+      <DependentUpon>CustomizeReportStyleForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grid\Print\GenerateReportForm.resx">
+      <DependentUpon>GenerateReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grid\Print\HeaderFooterEditor.resx">
+      <DependentUpon>HeaderFooterEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grid\Print\MyGridExportSaveFileDialog.resx">
+      <DependentUpon>MyGridExportSaveFileDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grid\Print\PrintPreviewForm.resx">
+      <DependentUpon>PrintPreviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

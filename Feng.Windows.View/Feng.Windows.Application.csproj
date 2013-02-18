@@ -1,0 +1,787 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AB5BA1B3-633A-4D93-B464-EC836778FD45}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Feng</RootNamespace>
+    <AssemblyName>Feng.Windows.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SourceAnalysisOverrideSettingsFile>C:\Documents and Settings\Administrator\Application Data\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\Common\Feng.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>False</DelaySign>
+    <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Reference\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Reference\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AMS.Profile" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine" />
+    <Reference Include="CrystalDecisions.Windows.Forms" />
+    <Reference Include="EvaluationEngine" />
+    <Reference Include="Feng.Base" />
+    <Reference Include="Feng.Controller" />
+    <Reference Include="Feng.Dao" />
+    <Reference Include="Feng.Data" />
+    <Reference Include="Feng.Gps" />
+    <Reference Include="Feng.Grid" />
+    <Reference Include="Feng.Map" />
+    <Reference Include="Feng.Model" />
+    <Reference Include="Feng.Net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=e562c5de18d0ba3c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\Feng.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Feng.NH" />
+    <Reference Include="Feng.Report" />
+    <Reference Include="Feng.Script" />
+    <Reference Include="Feng.Security" />
+    <Reference Include="Feng.View" />
+    <Reference Include="Feng.Windows" />
+    <Reference Include="Feng.Windows.Controller" />
+    <Reference Include="Feng.Windows.Forms" />
+    <Reference Include="Feng.Windows.Model" />
+    <Reference Include="IronPython" />
+    <Reference Include="itextsharp" />
+    <Reference Include="log4net" />
+    <Reference Include="Microsoft.Data.ConnectionUI.Dialog" />
+    <Reference Include="Microsoft.Dynamic" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling" />
+    <Reference Include="Microsoft.Practices.ServiceLocation" />
+    <Reference Include="Microsoft.ReportViewer.Common" />
+    <Reference Include="Microsoft.ReportViewer.WinForms" />
+    <Reference Include="Microsoft.Scripting" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="NHibernate" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Xceed.Compression.v5.1" />
+    <Reference Include="Xceed.Compression.Formats.v5.1" />
+    <Reference Include="Xceed.DockingWindows.v2.2" />
+    <Reference Include="Xceed.Editors.v2.6" />
+    <Reference Include="Xceed.FileSystem.v5.1" />
+    <Reference Include="Xceed.Grid.v3.9" />
+    <Reference Include="Xceed.Grid.Reporting.v3.9" />
+    <Reference Include="Xceed.SmartUI.v3.6" />
+    <Reference Include="Xceed.SmartUI.Controls.v3.6" />
+    <Reference Include="Xceed.SmartUI.UIStyle.v3.6" />
+    <Reference Include="Xceed.UI.v1.4" />
+    <Reference Include="Xceed.Validation.v1.3" />
+    <Reference Include="Xceed.Zip.v5.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Common\VersionAssemblyInfo.cs">
+      <Link>Properties\VersionAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="ApplicationExtention.cs" />
+    <Compile Include="ComboServiceProvider.cs" />
+    <Compile Include="DbDaoFactoryService.cs" />
+    <Compile Include="DBDataBuffer.cs" />
+    <Compile Include="DbDef.cs" />
+    <Compile Include="DefaultServiceProvider.cs" />
+    <Compile Include="Grid\Viewers\DetailGridStatisticsViewer.cs" />
+    <Compile Include="EmptyServiceProvider.cs" />
+    <Compile Include="Grid\GridExtention2.cs" />
+    <Compile Include="Grid\MySummaryCell.cs" />
+    <Compile Include="IManagerFactory.cs" />
+    <Compile Include="IWindowFactory.cs" />
+    <Compile Include="MemoryServiceProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Grid\Viewers\ObjectViewer.cs" />
+    <Compile Include="Grid\MySummaryRow.cs" />
+    <Compile Include="ResourceSessionFactoryManager.cs" />
+    <Compile Include="Windows\Utils\CommnadBindingHelper.cs" />
+    <Compile Include="Windows\Utils\GridColumnInfoHelper.cs" />
+    <Compile Include="Windows\Utils\GridDataConvert.cs" />
+    <Compile Include="Windows\Utils\GridDataLoad.cs" />
+    <Compile Include="Windows\Utils\ControlDataLoad.cs" />
+    <Compile Include="Windows\Utils\HelpGenerator.cs" />
+    <Compile Include="Windows\Utils\ManagerFactory.cs" />
+    <Compile Include="Windows\Utils\ModuleHelper.cs" />
+    <Compile Include="Windows\Utils\ParamCreatorHelper.cs" />
+    <Compile Include="Windows\Utils\UserConfigurationHelper.cs" />
+    <Compile Include="Windows\Utils\XmlEntityHelper.cs" />
+    <Compile Include="Windows\Forms\CodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\CodeForm.Designer.cs">
+      <DependentUpon>CodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\CommandHistory.cs" />
+    <Compile Include="Windows\Forms\CSharpCodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\DataControlGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\DataControlGroup.Designer.cs">
+      <DependentUpon>DataControlGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\IGridContainer.cs" />
+    <Compile Include="Windows\Forms\IRefreshDataForm.cs" />
+    <Compile Include="Windows\Forms\ArchiveDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveDetailForm.Designer.cs">
+      <DependentUpon>ArchiveDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\MyFileBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\MyFileBox.Designer.cs">
+      <DependentUpon>MyFileBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\DataControlWrapper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\DataControlWrapper.designer.cs">
+      <DependentUpon>DataControlWrapper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grid\BoundGridGroupByRow.cs" />
+    <Compile Include="Grid\BoundGridGroupManagerRow.cs" />
+    <Compile Include="Grid\Editors\MyObjectPickerEditor.cs" />
+    <Compile Include="Grid\Editors\MyObjectSelectEditor.cs" />
+    <Compile Include="Grid\Editors\MyObjectTextEditor.cs" />
+    <Compile Include="Grid\GeneratedArchiveUnboundGrid.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Grid\GeneratedDataUnboundGrid.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Grid\Search\SearchRowSelector.cs" />
+    <Compile Include="Grid\Search\SearchCell.cs" />
+    <Compile Include="Grid\Search\SearchRow.cs" />
+    <Compile Include="Windows\Forms\LabeledDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\LabeledDataControl.Designer.cs">
+      <DependentUpon>LabeledDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\LabeledSearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\LabeledSearchControl.Designer.cs">
+      <DependentUpon>LabeledSearchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\LabeledSearchControlBetween.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\LabeledSearchControlBetween.Designer.cs">
+      <DependentUpon>LabeledSearchControlBetween.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Utils\QueryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Utils\QueryForm.Designer.cs">
+      <DependentUpon>QueryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Utils\EventProcessUtils.cs" />
+    <Compile Include="Windows\Utils\GenerateReportData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Windows\Utils\GridFactory.cs" />
+    <Compile Include="Grid\ArchiveBoundGrid.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Grid\ArchiveGridExtention.cs" />
+    <Compile Include="Grid\ArchiveGridHelper.cs" />
+    <Compile Include="Grid\ArchiveGridHelper.Designer.cs">
+      <DependentUpon>ArchiveGridHelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grid\ArchiveUnboundDetailGrid.cs" />
+    <Compile Include="Grid\ArchiveUnboundGrid.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Grid\ArchiveUnboundWithDetailGridLoadOnDemand.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Grid\BoundGridExtention.cs" />
+    <Compile Include="Grid\BoundGridHelper.cs">
+    </Compile>
+    <Compile Include="Grid\BoundGridHelper.Designer.cs">
+      <DependentUpon>BoundGridHelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grid\Columns\WarningColumn.cs" />
+    <Compile Include="Grid\DataBoundDetailGrid.cs" />
+    <Compile Include="Grid\DataBoundGrid.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Grid\DataBoundWithDetailGridLoadOnDemand.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Grid\DataUnboundDetailGrid.cs" />
+    <Compile Include="Grid\DataUnboundGrid.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Grid\DataUnboundWithDetailGridLoadonce.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Grid\DataUnboundWithDetailGridLoadOnDemand.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Grid\GridFilterToolStripItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Grid\GridFilterToolStripItem.Designer.cs">
+      <DependentUpon>GridFilterToolStripItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grid\IArchiveGrid.cs" />
+    <Compile Include="Grid\IBoundGrid.cs" />
+    <Compile Include="Grid\IUnboundGridWithDetailGridLoadOnDemand.cs" />
+    <Compile Include="Grid\UnboundGridWithDetailGridLoadOnDemandExtention.cs" />
+    <Compile Include="Windows\Utils\ControlFactory.cs" />
+    <Compile Include="Windows\Utils\ProgressAsyncHelper.cs" />
+    <Compile Include="Windows\Utils\ReportGenerator.cs" />
+    <Compile Include="Windows\Utils\ReportHelper.cs" />
+    <Compile Include="Windows\Utils\WinFormManagerFactory.cs" />
+    <Compile Include="Windows\Forms\ArchiveDatabaseReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveDatabaseReportForm.Designer.cs">
+      <DependentUpon>ArchiveDatabaseReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveDataSetReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveDataSetReportForm.Designer.cs">
+      <DependentUpon>ArchiveDataSetReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveExcelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveExcelForm.Designer.cs">
+      <DependentUpon>ArchiveExcelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\BookmarkManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\BookmarkManagerForm.Designer.cs">
+      <DependentUpon>BookmarkManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\BookmarkPropertyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\BookmarkPropertyForm.Designer.cs">
+      <DependentUpon>BookmarkPropertyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ChangePwdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ChangePwdForm.designer.cs">
+      <DependentUpon>ChangePwdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ConnectionStringModifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ConnectionStringModifyForm.Designer.cs">
+      <DependentUpon>ConnectionStringModifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ExecuteTask.cs" />
+    <Compile Include="Windows\Forms\GridRelatedAddressTaskPane.cs" />
+    <Compile Include="Windows\Forms\GridRelatedControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\GridRelatedControl.Designer.cs">
+      <DependentUpon>GridRelatedControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\IArchiveDetailForm.cs" />
+    <Compile Include="Windows\Forms\IWinFormApplication.cs" />
+    <Compile Include="Windows\Forms\LoginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\LoginControl.designer.cs">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\LoginForm.designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\LoginSetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\LoginSetupForm.Designer.cs">
+      <DependentUpon>LoginSetupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\LogoutForm.cs" />
+    <Compile Include="Windows\Forms\MembershipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\MembershipForm.Designer.cs">
+      <DependentUpon>MembershipForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\MenuWindowExtention.cs" />
+    <Compile Include="Windows\Forms\MyObjectPicker.Designer.cs">
+      <DependentUpon>MyObjectPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\MyObjectSelectTextBox.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\MyObjectTextBox.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\MsReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\MsReportForm.Designer.cs">
+      <DependentUpon>MsReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\MyTemplateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\PythonCodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\PythonScriptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\RubyCodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\RubyScriptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ScriptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ScriptForm.Designer.cs">
+      <DependentUpon>ScriptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\Snippet.cs" />
+    <Compile Include="Windows\Forms\SnippetOptions.cs" />
+    <Compile Include="Windows\Forms\TabbedMdiForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\TaskPaneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\TaskPaneForm.designer.cs">
+      <DependentUpon>TaskPaneForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\GeneratedArchiveDataControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\GeneratedArchiveDataSetReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\IChildMdiForm.cs" />
+    <Compile Include="Windows\Utils\AlertHelper.cs" />
+    <Compile Include="Windows\Forms\ActionWindowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ActionWindowForm.Designer.cs">
+      <DependentUpon>ActionWindowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveCheckForm.Designer.cs">
+      <DependentUpon>ArchiveCheckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveDataControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveDataControlForm.Designer.cs">
+      <DependentUpon>ArchiveDataControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveDetailFormAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveDetailFormAuto.Designer.cs">
+      <DependentUpon>ArchiveDetailFormAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveDetailFormAutoWithDetailGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveDetailFormAutoWithDetailGrid.Designer.cs">
+      <DependentUpon>ArchiveDetailFormAutoWithDetailGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveDetailFormAutoWithDetailGridsPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveDetailFormAutoWithDetailGridsPanel.Designer.cs">
+      <DependentUpon>ArchiveDetailFormAutoWithDetailGridsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveDetailFormAutoWithMultiDetailGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveDetailFormAutoWithMultiDetailGrid.Designer.cs">
+      <DependentUpon>ArchiveDetailFormAutoWithMultiDetailGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveDetailFormWithDetailGrids.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveDetailFormWithDetailGrids.Designer.cs">
+      <DependentUpon>ArchiveDetailFormWithDetailGrids.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Utils\ArchiveFormFactory.cs" />
+    <Compile Include="Windows\Forms\ArchiveGridForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveGridForm.Designer.cs">
+      <DependentUpon>ArchiveGridForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveOperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveOperationForm.Designer.cs">
+      <DependentUpon>ArchiveOperationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveSearchForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveSearchForm.Designer.cs">
+      <DependentUpon>ArchiveSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveSeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveSeeForm.Designer.cs">
+      <DependentUpon>ArchiveSeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveSelectForm.Designer.cs">
+      <DependentUpon>ArchiveSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveSetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ArchiveSetupForm.Designer.cs">
+      <DependentUpon>ArchiveSetupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomSearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomSearchControl.designer.cs">
+      <DependentUpon>CustomSearchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomSearchToolStripItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\CustomSearchToolStripItem.Designer.cs">
+      <DependentUpon>CustomSearchToolStripItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\DataControlFormCreator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\GeneratedArchiveCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\GeneratedArchiveOperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\GeneratedArchiveSeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\GridGotoDetailFormToolStripItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\GridGotoDetailFormToolStripItem.Designer.cs">
+      <DependentUpon>GridGotoDetailFormToolStripItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\GridGotoFormTaskPane.cs" />
+    <Compile Include="Windows\Forms\GridGotoFormToolStripItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\GridGotoFormToolStripItem.Designer.cs">
+      <DependentUpon>GridGotoFormToolStripItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\MyChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\MyChildForm.Designer.cs">
+      <DependentUpon>MyChildForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\PageBindingSource.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\PageNavigator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ProcessSelect.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Windows\Forms\SearchControlContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\SearchControlContainer.Designer.cs">
+      <DependentUpon>SearchControlContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\SearchWindowSetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\SearchWindowSetupForm.Designer.cs">
+      <DependentUpon>SearchWindowSetupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\TabbedMdiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\TabbedMdiForm.designer.cs">
+      <DependentUpon>TabbedMdiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\TaskPane.cs" />
+    <Compile Include="Windows\Forms\TaskPaneAlert.cs" />
+    <Compile Include="Windows\Forms\TestUtility.cs" />
+    <Compile Include="Windows\Forms\GeneratedArchiveDatabaseReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Utils\UserActions.cs" />
+    <Compile Include="Windows\Forms\WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\WaitForm.Designer.cs">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\MyGridSetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\MyGridSetupForm.Designer.cs">
+      <DependentUpon>MyGridSetupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\MyReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\MyReportForm.Designer.cs">
+      <DependentUpon>MyReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Forms\GeneratedArchiveExcelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\MyObjectPicker.cs">
+      <SubType>Control</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\WinFormApplicationFactory.cs" />
+    <Compile Include="Windows\Forms\TrackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\TrackForm.Designer.cs">
+      <DependentUpon>TrackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Utils\SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Utils\SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Grid\ArchiveGridHelper.resx">
+      <DependentUpon>ArchiveGridHelper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\CodeForm.resx">
+      <DependentUpon>CodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\DataControlGroup.resx">
+      <DependentUpon>DataControlGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\LabeledSearchControl.resx">
+      <DependentUpon>LabeledSearchControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\LabeledSearchControlBetween.resx">
+      <DependentUpon>LabeledSearchControlBetween.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Utils\QueryForm.resx">
+      <DependentUpon>QueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ActionWindowForm.resx">
+      <DependentUpon>ActionWindowForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ArchiveCheckForm.resx">
+      <DependentUpon>ArchiveCheckForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ArchiveDataControlForm.resx">
+      <DependentUpon>ArchiveDataControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ArchiveDetailFormAuto.resx">
+      <DependentUpon>ArchiveDetailFormAuto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ArchiveDetailFormAutoWithDetailGrid.resx">
+      <DependentUpon>ArchiveDetailFormAutoWithDetailGrid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ArchiveDetailFormWithDetailGrids.resx">
+      <DependentUpon>ArchiveDetailFormWithDetailGrids.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ArchiveOperationForm.resx">
+      <DependentUpon>ArchiveOperationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ArchiveSearchForm.resx">
+      <DependentUpon>ArchiveSearchForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ArchiveSeeForm.resx">
+      <DependentUpon>ArchiveSeeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ArchiveSelectForm.resx">
+      <DependentUpon>ArchiveSelectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ArchiveSetupForm.resx">
+      <DependentUpon>ArchiveSetupForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ArchiveDetailForm.resx">
+      <DependentUpon>ArchiveDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ScriptForm.resx">
+      <DependentUpon>ScriptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\SearchControlContainer.resx">
+      <DependentUpon>SearchControlContainer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\TabbedMdiForm.resx">
+      <DependentUpon>TabbedMdiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Utils\SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Windows\Forms\ArchiveDataSetReportForm.resx">
+      <DependentUpon>ArchiveDataSetReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ArchiveDetailFormAutoWithDetailGridsPanel.resx">
+      <DependentUpon>ArchiveDetailFormAutoWithDetailGridsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\BookmarkManagerForm.resx">
+      <DependentUpon>BookmarkManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\BookmarkPropertyForm.resx">
+      <DependentUpon>BookmarkPropertyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\ConnectionStringModifyForm.resx">
+      <DependentUpon>ConnectionStringModifyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\CustomSearchControl.resx">
+      <DependentUpon>CustomSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\GridRelatedControl.resx">
+      <DependentUpon>GridRelatedControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\LoginControl.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\LoginSetupForm.resx">
+      <DependentUpon>LoginSetupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\MsReportForm.resx">
+      <DependentUpon>MsReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\SearchWindowSetupForm.resx">
+      <DependentUpon>SearchWindowSetupForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\WaitForm.resx">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\MyGridSetupForm.resx">
+      <DependentUpon>MyGridSetupForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Forms\MyReportForm.resx">
+      <DependentUpon>MyReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

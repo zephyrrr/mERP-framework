@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Feng.Example" assembly="Feng.Example" xmlns="urn:nhibernate-mapping-2.2">
+  <class table="Order" optimistic-lock="version" name="Feng.Example.Order, Feng.Example">
+    <id name="Id" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Name" not-null="true" />
+    <property name="Receipt" not-null="true" />
+    <property name="OrderTime" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <bag name="OrderLines" inverse="true" cascade="none">
+      <key column="Order" />
+      <one-to-many class="Feng.Example.OrderLine, Feng.Example" not-found="ignore" />
+    </bag>
+  </class>
+  <class table="OrderLine" optimistic-lock="version" name="Feng.Example.OrderLine, Feng.Example">
+    <id name="Id" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="ProductId" column="Product" not-null="true" />
+    <property name="Count" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="Order" column="Order" not-null="true" foreign-key="FK_Order_OrderLine" />
+    <one-to-one name="Product" cascade="none" constrained="true" foreign-key="FK_OrderLine_Product" />
+  </class>
+  <class table="Product" optimistic-lock="version" name="Feng.Example.Product, Feng.Example">
+    <id name="Id" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Name" not-null="true" />
+    <property name="Description" not-null="false" />
+    <property name="Price" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+</hibernate-mapping>

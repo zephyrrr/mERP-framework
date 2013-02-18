@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Feng.AbstractEventDao" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIEBBBAAAACAAAQAAGIAIAEIAAAAIAAAAAhQACA=</HashCode>
+      <FileName>AbstractEventDao.cs</FileName>
+      <NewMemberFileName>AbstractDao.cs</NewMemberFileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Feng.BaseDao&lt;T&gt;" Collapsed="true">
+    <Position X="13.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAABAAAECACAARAUAAAAAEAAFAAAAgAAAAEQKA=</HashCode>
+      <FileName>BaseDao~1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Feng.AbstractMemoryDao&lt;T&gt;" Collapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAABAAAEAAAAAAAEAAAAAEAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>AbstractMemoryDao~1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Feng.AbstractEventDao&lt;T&gt;" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAIEBBFAAAACAAAAACOIAIYEIAAAAIAAQAAhYACA=</HashCode>
+      <FileName>AbstractEventDao~1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Feng.MemoryDao&lt;T&gt;" Collapsed="true">
+    <Position X="16.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACEAAAAABAAEAkAAAgAEAAAAIAAAIAAAAAEgADIBIA=</HashCode>
+      <FileName>MemoryDao~1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Feng.MemoryDao2&lt;T, S&gt;" Collapsed="true">
+    <Position X="16.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MemoryDao2~1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Feng.ManytoOneDao&lt;S, T&gt;" Collapsed="true">
+    <Position X="11.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAACAAAAAAAIAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ManytoOneDao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Feng.MasterDao&lt;T, S&gt;" Collapsed="true">
+    <Position X="11.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEBABAAAACAAAAAAAIAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MasterDao~2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Feng.MasterDao12&lt;T, S&gt;" Collapsed="true">
+    <Position X="11.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEBABAAAACAAAAAAAIAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MasterDao12~2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Feng.MasterDao2&lt;T, S&gt;" Collapsed="true">
+    <Position X="9.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEBAAAAAACAAAAAAAIAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MasterDao2~2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Feng.MasterDao22&lt;T, S&gt;" Collapsed="true">
+    <Position X="9.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEBAAAAAACAAAAAAAIAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MasterDao22~2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Feng.MasterDao3&lt;T, S&gt;" Collapsed="true">
+    <Position X="8.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEBAAAAAACAAAAAAAIAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MasterDao3~2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Feng.MasterDetailMemoryDao&lt;T, S&gt;" Collapsed="true">
+    <Position X="18.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAgAAAEAAAAAAAAAACAAAAAAAAAIA=</HashCode>
+      <FileName>MasterDetailMemoryDao~2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Feng.MasterGenerateDetailDao&lt;T, S&gt;" Collapsed="true">
+    <Position X="10.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEBAAAAAACAAAAAAAIAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MasterGenerateDetailDao~1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Feng.MasterNoRelationDao&lt;T, S&gt;" Collapsed="true">
+    <Position X="11.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEBAAAAAAAAAAAAAAIAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MasterNoRelationDao~2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Feng.OnetoOneChildDao&lt;S, T&gt;" Collapsed="true">
+    <Position X="9.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEBAAAAAACAAAAAAAIAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OneToOneChildDao~2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Feng.OnetoOneDao&lt;T, S&gt;" Collapsed="true">
+    <Position X="11.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEBAAAAAACAAAAAAAIAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OnetoOneDao~2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Feng.OnetoOneGenerateChildDao&lt;T, S&gt;" Collapsed="true">
+    <Position X="9.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEBAACAAACAAAAAAAIAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OnetoOneGenerateChildDao~2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Feng.AbstractRelationalDao&lt;T, S&gt;" Collapsed="true">
+    <Position X="13.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEABAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>AbstractRelationalDao~2.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Feng.AbstractMemoriedRelationalDao&lt;T, S&gt;" Collapsed="true">
+    <Position X="14" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAgAAAAAAAoAAAABAAAA=</HashCode>
+      <FileName>AbstractRelationalDao~2.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Feng.IEventDao" Collapsed="true">
+    <Position X="2" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEBAAAAAACAAAAAAEIAIAAAAAAAAAAAAAgQACA=</HashCode>
+      <FileName>IEventDao.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Feng.IEventDao&lt;T&gt;" Collapsed="true">
+    <Position X="5.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEBAAAAAACAAAAAAEIAIAAAAAAAAAAAAAgQACA=</HashCode>
+      <FileName>IEventDao.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Feng.IBaseDao" Collapsed="true">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAABAAAAAAAAAAAAAAAAAEAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>IBaseDao.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Feng.IBatchDao" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAgAAAAAQAA=</HashCode>
+      <FileName>IBatchDao.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Feng.IBaseDao&lt;T&gt;" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAABAAAAAAAAAAAAAAAAAEAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>IBaseDao~1.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Feng.IRelationalDao&lt;T, S&gt;" Collapsed="true">
+    <Position X="5.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IRelationalDao~2.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Feng.IMemoriedRelationalDao" Collapsed="true">
+    <Position X="4" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>IRelationalDao~2.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Feng.IMemoriedRelationalDao&lt;T, S&gt;" Collapsed="true">
+    <Position X="5.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>IRelationalDao~2.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Feng.IRepositioryDao&lt;T&gt;" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAABAAAAAAAAAQAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IRepositioryDao~1.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Feng.IMemoryDao" Collapsed="true">
+    <Position X="2" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>MemoryDao~1.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Feng.IMemoryDao&lt;T&gt;" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAgAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>MemoryDao~1.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Feng.IRelationalDao" Collapsed="true">
+    <Position X="2" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IRelationalDao.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Feng.IRelationalDao&lt;T&gt;" Collapsed="true">
+    <Position X="5.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IRelationalDao.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

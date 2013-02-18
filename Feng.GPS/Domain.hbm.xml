@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="gpx" assembly="Feng.Gps" xmlns="urn:nhibernate-mapping-2.2">
+  <class table="AD_Route" optimistic-lock="version" name="Feng.Route, Feng.Gps">
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="RouteKey" length="255" not-null="false" />
+    <property name="DirectionExpression" length="255" not-null="false" />
+    <property name="DirectionReal" length="255" not-null="false" />
+    <property name="SampleTrack" not-null="false" />
+    <property name="SampleTrackData" length="2147483647" not-null="false" />
+    <property name="Time" not-null="false" />
+    <property name="Distance" not-null="false" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class table="SD_Track_Point" optimistic-lock="version" name="Feng.TrackPoint, Feng.Gps">
+    <id name="ID" column="Id">
+      <generator class="identity" />
+    </id>
+    <property name="VehicleName" length="20" not-null="true" />
+    <property name="GpsTime" not-null="true" />
+    <property name="Longitude" not-null="true" />
+    <property name="Latitude" not-null="true" />
+    <property name="Speed" not-null="true" />
+    <property name="Heading" not-null="true" />
+    <property name="Accuracy" not-null="true" />
+    <property name="Altitude" not-null="true" />
+    <property name="MessageTime" not-null="true" />
+    <property name="IsActive" not-null="true" />
+    <many-to-one name="Track" not-null="false" foreign-key="FK_TrackPoint_Track" />
+  </class>
+  <class table="AD_Direction" optimistic-lock="version" name="Feng.Direction, Feng.Gps">
+    <id name="ID" column="Name" length="255">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="StartAddress" length="50" not-null="true" />
+    <property name="EndAddress" length="50" not-null="true" />
+    <property name="Time" not-null="true" />
+    <property name="Distance" not-null="true" />
+    <property name="Help" length="255" not-null="false" />
+    <property name="Description" length="2000" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class table="SD_Way_Point" optimistic-lock="version" name="Feng.WayPoint, Feng.Gps">
+    <id name="ID" column="Id">
+      <generator class="identity" />
+    </id>
+    <property name="Action" not-null="false" />
+    <property name="VehicleName" length="20" not-null="true" />
+    <property name="GpsTime" not-null="true" />
+    <property name="Longitude" not-null="true" />
+    <property name="Latitude" not-null="true" />
+    <property name="Speed" not-null="true" />
+    <property name="Heading" not-null="true" />
+    <property name="Accuracy" not-null="true" />
+    <property name="Altitude" not-null="true" />
+    <property name="MessageTime" not-null="true" />
+    <property name="IsActive" not-null="true" />
+    <many-to-one name="Track" not-null="true" foreign-key="FK_WayPoint_Track" />
+  </class>
+  <class table="SD_Track" optimistic-lock="version" name="Feng.Track, Feng.Gps">
+    <id name="ID" column="Id">
+      <generator class="identity" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Name" length="50" not-null="true" />
+    <property name="StartTime" not-null="false" />
+    <property name="EndTime" not-null="false" />
+    <property name="VehicleName" length="20" not-null="true" />
+    <property name="Gpx" length="2147483647" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="Route" not-null="false" foreign-key="FK_Track_Route" />
+    <bag name="TrackPoints" inverse="true" cascade="none" order-by="GpsTime">
+      <key column="Track" />
+      <one-to-many class="Feng.TrackPoint, Feng.Gps" not-found="ignore" />
+    </bag>
+    <bag name="WayPoints" inverse="true" cascade="none" order-by="GpsTime">
+      <key column="Track" />
+      <one-to-many class="Feng.WayPoint, Feng.Gps" not-found="ignore" />
+    </bag>
+  </class>
+</hibernate-mapping>

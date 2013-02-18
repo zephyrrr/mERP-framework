@@ -1,0 +1,73 @@
+﻿<?xml version="1.0"?>
+<project name="Feng.Report" default="build">
+<property name="basename" value="Feng.Report" /> 
+<property name="debug" value="true" /> 
+<property name="build.dir" value="../Reference" /> 
+<target name="clean" description="cleans build directory">
+  <delete failonerror="false">
+  <fileset>
+    <include name="${build.dir}/${basename}.dll" /> 
+    <include name="${build.dir}/${basename}.pdb" />
+    <include name="${build.dir}/${basename}.xml" />
+  </fileset>
+  </delete>
+</target>
+<target name="debug">
+  <call target="build" />
+</target>
+<target name="release">
+  <property name="debug" value="false" /> 
+  <property name="build.dir" value="../Reference" />
+  <call target="build" />
+</target>
+<target name="build">
+  <mkdir dir="${build.dir}" /> 
+  <csc target="library" output="${build.dir}/${basename}.dll" debug="${debug}">
+  <sources>
+    <include name="*.cs" />
+    <include name="Windows/Forms.cs" />
+    <include name="Properties/*.cs" />
+  </sources>
+   <resources>
+	<include name="*.resx" />
+	<include name="Properties/*.resx" />
+</resources>
+  <references>
+    <lib>
+         <include name="..\Support" />
+    </lib>
+    <include name="System.dll" /> 
+    <include name="System.Data.dll" /> 
+    <include name="System.Drawing.dll" /> 
+    <include name="System.Windows.Forms.dll" /> 
+    <include name="System.Design.dll" />
+    <include name="System.XML.dll" />
+	  <include name="System.Web.dll" />
+	  <include name="NHibernate.dll" />
+	  <include name="log4net.dll" />
+	  <include name="Xceed.Editors.dll" />
+	  <include name="Xceed.Grid.dll" />
+	  <include name="Xceed.UI.dll" />
+	  <include name="Xceed.Validation.dll" />
+	  <include name="Xceed.SmartUI.dll" />
+    <include name="Xceed.SmartUI.Controls.dll" />
+    <include name="Xceed.SmartUI.UIStyle.dll" />
+    <include name="Xceed.Grid.Reporting.dll" />
+	  <include name="Microsoft.Practices.EnterpriseLibrary.Common.dll"/>
+	  <include name="Microsoft.Practices.EnterpriseLibrary.Data.dll"/>
+    <include name="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll"/>
+    
+<include name="C:\Program Files\Common Files\Business Objects\2.7\Managed\CrystalDecisions.ReportSource.dll" />
+<include name="C:\Program Files\Common Files\Business Objects\2.7\Managed\CrystalDecisions.Shared.dll" /> 
+<include name="C:\Program Files\Common Files\Business Objects\2.7\Managed\CrystalDecisions.CrystalReports.Engine.dll" /> 
+<include name="C:\Program Files\Common Files\Business Objects\2.7\Managed\CrystalDecisions.Windows.Forms.dll" />
+    <include name="..\Reference\AMS.TextBox.dll" />
+     <include name="..\Reference\AMS.Profile.dll" />
+	  <include name="..\Reference\Feng.Base.dll" />
+	  <include name="..\Reference\Feng.Security.dll" />
+	  <include name="..\Reference\Feng.Windows.dll" />
+	  <include name="..\Reference\Demo.Resources.dll" />
+  </references>
+  </csc>
+</target>
+</project>

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{67B477A7-E8E8-445F-8393-6ED76F5C37D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Feng</RootNamespace>
+    <AssemblyName>Feng.Windows.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Reference\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Reference\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\Common\Feng.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Feng.Base" />
+    <Reference Include="Feng.Data" />
+    <Reference Include="Feng.Model" />
+    <Reference Include="Feng.Net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=e562c5de18d0ba3c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\Feng.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Feng.NH" />
+    <Reference Include="Feng.Script" />
+    <Reference Include="Feng.Security" />
+    <Reference Include="Feng.Windows" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling" />
+    <Reference Include="NHibernate" />
+    <Reference Include="NHibernate.Mapping.Attributes" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Common\VersionAssemblyInfo.cs">
+      <Link>Properties\VersionAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="ADInfoBll.cs" />
+    <Compile Include="ADInfoDal.cs" />
+    <Compile Include="NH\ADInfoDal.cs" />
+    <Compile Include="ADUtils.cs" />
+    <Compile Include="ConfigInfo\ActionInfo.cs" />
+    <Compile Include="ConfigInfo\AlertInfo.cs" />
+    <Compile Include="ConfigInfo\AlertRuleInfo.cs" />
+    <Compile Include="ConfigInfo\AttachmentInfo.cs" />
+    <Compile Include="ConfigInfo\BookmarkInfo.cs" />
+    <Compile Include="ConfigInfo\ClientInfo.cs" />
+    <Compile Include="ConfigInfo\CommandBindingInfo.cs" />
+    <Compile Include="ConfigInfo\CustomSearchInfo.cs" />
+    <Compile Include="ConfigInfo\DaoFactoryInfo.cs" />
+    <Compile Include="ConfigInfo\EntityBufferInfo.cs" />
+    <Compile Include="ConfigInfo\EventProcessInfo.cs" />
+    <Compile Include="ConfigInfo\ExecuteTaskInfo.cs" />
+    <Compile Include="ConfigInfo\FormInfo.cs" />
+    <Compile Include="ConfigInfo\GridCellInfo.cs" />
+    <Compile Include="ConfigInfo\GridColumnInfo.cs" />
+    <Compile Include="ConfigInfo\GridColumnWarningInfo.cs" />
+    <Compile Include="ConfigInfo\GridFilterInfo.cs" />
+    <Compile Include="ConfigInfo\GridGroupInfo.cs" />
+    <Compile Include="ConfigInfo\GridInfo.cs" />
+    <Compile Include="ConfigInfo\GridRelatedAddressInfo.cs" />
+    <Compile Include="ConfigInfo\GridRelatedInfo.cs" />
+    <Compile Include="ConfigInfo\GridRowInfo.cs" />
+    <Compile Include="ConfigInfo\MenuHistoryInfo.cs" />
+    <Compile Include="ConfigInfo\MenuInfo.cs" />
+    <Compile Include="ConfigInfo\ModuleByClientInfo.cs" />
+    <Compile Include="ConfigInfo\ModuleByOrgInfo.cs" />
+    <Compile Include="ConfigInfo\ModuleDependencyInfo.cs" />
+    <Compile Include="ConfigInfo\ModuleIncludeInfo.cs" />
+    <Compile Include="ConfigInfo\ModuleInfo.cs" />
+    <Compile Include="ConfigInfo\MonthReportDataInfo.cs" />
+    <Compile Include="ConfigInfo\MonthReportInfo.cs" />
+    <Compile Include="ConfigInfo\NameValueMappingInfo.cs" />
+    <Compile Include="ConfigInfo\OrganizationInfo.cs" />
+    <Compile Include="ConfigInfo\ParamCreatorInfo.cs" />
+    <Compile Include="ConfigInfo\PluginInfo.cs" />
+    <Compile Include="ConfigInfo\ProcessInfo.cs" />
+    <Compile Include="ConfigInfo\ReportDataInfo.cs" />
+    <Compile Include="ConfigInfo\ReportInfo.cs" />
+    <Compile Include="ConfigInfo\ResourceContent.cs" />
+    <Compile Include="ConfigInfo\ResourceDependencyInfo.cs" />
+    <Compile Include="ConfigInfo\ResourceInfo.cs" />
+    <Compile Include="ConfigInfo\RoleInfo.cs" />
+    <Compile Include="ConfigInfo\ServerTaskScheduleInfo.cs" />
+    <Compile Include="ConfigInfo\SimpleParamInfo.cs" />
+    <Compile Include="ConfigInfo\TaskInfo.cs" />
+    <Compile Include="ConfigInfo\UserConfigurationInfo.cs" />
+    <Compile Include="ConfigInfo\WebServiceInfo.cs" />
+    <Compile Include="ConfigInfo\WindowInfo.cs" />
+    <Compile Include="ConfigInfo\WindowMenuInfo.cs" />
+    <Compile Include="ConfigInfo\WindowSelectInfo.cs" />
+    <Compile Include="ConfigInfo\WindowTabEventInfo.cs" />
+    <Compile Include="ConfigInfo\WindowTabInfo.cs" />
+    <Compile Include="NH\AuditLogInterceptor.cs" />
+    <Compile Include="NH\AuditLogRecord.cs" />
+    <Compile Include="Data\UntypedEntityInfo.cs" />
+    <Compile Include="NH\DeleteLogInterceptor.cs" />
+    <Compile Include="NH\DateYYMMIncrementGenerator.cs" />
+    <Compile Include="NH\Repository.cs" />
+    <Compile Include="NH\TypedEntityInfo.cs" />
+    <Compile Include="Permission.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NH\RepositoryFactory.cs" />
+    <Compile Include="PythonandEvalutionEngineEntityScript.cs" />
+    <Compile Include="PythonEntityScript.cs" />
+    <Compile Include="Windows\Utils\ResourceInfoHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Common\Feng.snk">
+      <Link>Feng.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

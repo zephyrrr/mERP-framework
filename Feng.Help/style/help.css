@@ -1,0 +1,71 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #666;
+  border-color: black;
+}
+
+.title{  
+  font-size: 1.5em;
+  line-height:30pt;
+  text-align: center;
+}
+
+.subtitle{  
+  font-size: 1.2em;
+  margin: 1em 0em;
+  line-height:30pt;
+}
+
+col {
+  border-right: 1px solid #ccc;
+}
+
+col#albumCol {
+  border: none;
+}
+
+thead {
+  background: #ccc url(images/bar.gif) repeat-x left center;
+  border-top: 1px solid #a5a5a5;
+  border-bottom: 1px solid #a5a5a5;
+}
+
+thead tr:hover {
+  background-color: transparent;
+  color: inherit;
+}
+
+th {
+  font-weight: normal;
+  text-align: left; 
+}
+
+td{
+  font-size: 0.9em;
+}
+
+th, td {
+  padding: 0.3em 0.3em;  
+}
+
+
+body {
+  background-color:#BFD4FF;
+}
+
+
+tr:hover {
+  background-color:#3d80df;
+  color: #fff;
+}
+
+.bottom{
+  font-size: 0.9em;
+  line-height:40pt;
+  text-align: right;
+}
+
+div{
+  margin: 1em 5em;
+}

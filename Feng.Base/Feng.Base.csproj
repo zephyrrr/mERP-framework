@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ABC84F9A-3E1F-4827-8EB8-F6DE6F78904B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Feng</RootNamespace>
+    <AssemblyName>Feng.Base</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SourceAnalysisOverrideSettingsFile>C:\Documents and Settings\Administrator\Application Data\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\Common\Feng.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>False</DelaySign>
+    <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Reference\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>..\Reference\Feng.Base.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\Reference\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ServiceLocation" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Common\VersionAssemblyInfo.cs">
+      <Link>Properties\VersionAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AbstractApplicationDirectory.cs" />
+    <Compile Include="Async\AsyncHelper.cs" />
+    <Compile Include="Async\AsyncManager.cs" />
+    <Compile Include="Async\Events.cs" />
+    <Compile Include="Async\IWorker.cs" />
+    <Compile Include="Async\WorkerBase.cs" />
+    <Compile Include="Cache.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="CommandManager.cs" />
+    <Compile Include="Const.cs" />
+    <Compile Include="EmptyInstance.cs" />
+    <Compile Include="EmptyMessageBox.cs" />
+    <Compile Include="ExceptionProcess.cs" />
+    <Compile Include="HashtableCache.cs" />
+    <Compile Include="IApplication.cs" />
+    <Compile Include="IApplicationDirectory.cs" />
+    <Compile Include="IApplicationFactory.cs" />
+    <Compile Include="ICache.cs" />
+    <Compile Include="ICommand.cs" />
+    <Compile Include="IDatabase.cs" />
+    <Compile Include="IExceptionProcess.cs" />
+    <Compile Include="ILogger.cs" />
+    <Compile Include="IMessageBox.cs" />
+    <Compile Include="IPersistentCache.cs" />
+    <Compile Include="IPlugin.cs" />
+    <Compile Include="IRepositoryConsumer.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="IRepositoryFactory.cs" />
+    <Compile Include="IScript.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="LoggerExceptionProcess.cs" />
+    <Compile Include="MessageBox.cs" />
+    <Compile Include="ObjectPool~1.cs" />
+    <Compile Include="ProductInfo.cs" />
+    <Compile Include="RepositoryConfigNameAttribute.cs" />
+    <Compile Include="Utils\RepositoryHelper.cs" />
+    <Compile Include="Script.cs" />
+    <Compile Include="Search\QueryExpression.cs" />
+    <Compile Include="ServiceProvider.cs" />
+    <Compile Include="StringExceptionProcess.cs" />
+    <Compile Include="StringExtention.cs" />
+    <Compile Include="SystemConfiguration.cs" />
+    <Compile Include="Definition.cs" />
+    <Compile Include="DataBuffers.cs" />
+    <Compile Include="InvalidUserOperationException.cs" />
+    <Compile Include="ISearchOrder.cs" />
+    <Compile Include="NameValue.cs" />
+    <Compile Include="SearchOrder.cs" />
+    <Compile Include="Search\AbstractExpression.cs" />
+    <Compile Include="SearchExpression.cs" />
+    <Compile Include="ISearchExpression.cs" />
+    <Compile Include="Search\LexicalAnalyzer.cs" />
+    <Compile Include="Search\LogicalExpression.cs" />
+    <Compile Include="Search\Order.cs" />
+    <Compile Include="Search\Parse.cs" />
+    <Compile Include="Search\SimpleExpression.cs" />
+    <Compile Include="Singleton~1.cs" />
+    <Compile Include="EnumNameValue.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemDirectory.cs" />
+    <Compile Include="Utils\CollectionHelper.cs" />
+    <Compile Include="Utils\CompareHelper.cs" />
+    <Compile Include="Utils\ConvertHelper.cs" />
+    <Compile Include="Utils\DateTimeHelper.cs" />
+    <Compile Include="Utils\EnumHelper.cs" />
+    <Compile Include="Utils\ExceptionHelper.cs" />
+    <Compile Include="Utils\IOHelper.cs" />
+    <Compile Include="Utils\RandomHelper.cs" />
+    <Compile Include="Utils\ReflectionHelper.cs" />
+    <Compile Include="Utils\StringHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

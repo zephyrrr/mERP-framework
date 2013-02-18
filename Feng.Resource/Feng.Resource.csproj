@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{732C962A-07AC-44AF-8608-8BCD46341E70}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Feng.Resource</RootNamespace>
+    <AssemblyName>Feng.Resource</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SourceAnalysisOverrideSettingsFile>C:\Documents and Settings\Administrator\Application Data\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\Common\Feng.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>False</DelaySign>
+    <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Reference\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Reference\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Common\VersionAssemblyInfo.cs">
+      <Link>Properties\VersionAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\applicationManagement.png" />
+    <EmbeddedResource Include="Icons\iconAdjust.png" />
+    <EmbeddedResource Include="Icons\iconAttention.png" />
+    <EmbeddedResource Include="Icons\iconAutoForm.png" />
+    <EmbeddedResource Include="Icons\iconCancel.png" />
+    <EmbeddedResource Include="Icons\iconClose.png" />
+    <EmbeddedResource Include="Icons\iconConfigForm.png" />
+    <EmbeddedResource Include="Icons\iconDetail.png" />
+    <EmbeddedResource Include="Icons\iconEdit.png" />
+    <EmbeddedResource Include="Icons\iconErase.png" />
+    <EmbeddedResource Include="Icons\iconExpand.png" />
+    <EmbeddedResource Include="Icons\iconExportExcel.png" />
+    <EmbeddedResource Include="Icons\iconExternalLink.png" />
+    <EmbeddedResource Include="Icons\iconFilter.png" />
+    <EmbeddedResource Include="Icons\iconFind.png" />
+    <EmbeddedResource Include="Icons\iconFirst.png" />
+    <EmbeddedResource Include="Icons\iconFolder.png" />
+    <EmbeddedResource Include="Icons\iconGroup.png" />
+    <EmbeddedResource Include="Icons\iconInvisible.png" />
+    <EmbeddedResource Include="Icons\iconLast.png" />
+    <EmbeddedResource Include="Icons\iconNew.png" />
+    <EmbeddedResource Include="Icons\iconNewReport.png" />
+    <EmbeddedResource Include="Icons\iconNext.png" />
+    <EmbeddedResource Include="Icons\iconOk.png" />
+    <EmbeddedResource Include="Icons\iconOpen.png" />
+    <EmbeddedResource Include="Icons\iconPreset.png" />
+    <EmbeddedResource Include="Icons\iconPrevious.png" />
+    <EmbeddedResource Include="Icons\iconPrint.png" />
+    <EmbeddedResource Include="Icons\iconProcess.png" />
+    <EmbeddedResource Include="Icons\iconRefresh.png" />
+    <EmbeddedResource Include="Icons\iconRelated.png" />
+    <EmbeddedResource Include="Icons\iconReport.png" />
+    <EmbeddedResource Include="Icons\iconReset.png" />
+    <EmbeddedResource Include="Icons\iconSave.png" />
+    <EmbeddedResource Include="Icons\iconSaveAndNew.png" />
+    <EmbeddedResource Include="Icons\iconSaveAndNext.png" />
+    <EmbeddedResource Include="Icons\iconSaveAndReturn.png" />
+    <EmbeddedResource Include="Icons\iconSearch.png" />
+    <EmbeddedResource Include="Icons\iconSetup.png" />
+    <EmbeddedResource Include="Icons\iconView.png" />
+    <EmbeddedResource Include="Images\Splash.png" />
+    <EmbeddedResource Include="Icons\time_star.gif" />
+    <EmbeddedResource Include="Icons\time_sun.gif" />
+    <EmbeddedResource Include="Icons\time_yueliang.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\iconAttach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\iconBookmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\Debug.Start.png" />
+    <EmbeddedResource Include="Icons\Debug.StartWithoutDebug.png" />
+    <EmbeddedResource Include="Icons\Debug.StepOut.png" />
+    <EmbeddedResource Include="Icons\Debug.StepOver.png" />
+    <EmbeddedResource Include="Icons\Debug.Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\Debug.StepInto.png" />
+    <EmbeddedResource Include="Icons\Document.Copy.png" />
+    <EmbeddedResource Include="Icons\Document.Cut.png" />
+    <EmbeddedResource Include="Icons\Document.New.png" />
+    <EmbeddedResource Include="Icons\Document.Open.png" />
+    <EmbeddedResource Include="Icons\Document.Paste.png" />
+    <EmbeddedResource Include="Icons\Document.Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\notifierClose.png" />
+    <EmbeddedResource Include="Images\notifierSkin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\iconRowSearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\exclamationpoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\start.png" />
+    <EmbeddedResource Include="Icons\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\asterisk_red.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

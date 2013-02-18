@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Feng.Security.WebService", "Feng.Security.WebService.csproj", "{57D1FD9E-9BE9-4DD5-8BFB-B890D6D6FD29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Feng.Security", "..\Feng.Security\Feng.Security.csproj", "{123DAB76-C8DD-4F1C-BD84-74B539B5C45F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57D1FD9E-9BE9-4DD5-8BFB-B890D6D6FD29}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{57D1FD9E-9BE9-4DD5-8BFB-B890D6D6FD29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57D1FD9E-9BE9-4DD5-8BFB-B890D6D6FD29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57D1FD9E-9BE9-4DD5-8BFB-B890D6D6FD29}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{57D1FD9E-9BE9-4DD5-8BFB-B890D6D6FD29}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{57D1FD9E-9BE9-4DD5-8BFB-B890D6D6FD29}.Release|.NET.ActiveCfg = Release|Any CPU
+		{57D1FD9E-9BE9-4DD5-8BFB-B890D6D6FD29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57D1FD9E-9BE9-4DD5-8BFB-B890D6D6FD29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57D1FD9E-9BE9-4DD5-8BFB-B890D6D6FD29}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{57D1FD9E-9BE9-4DD5-8BFB-B890D6D6FD29}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{123DAB76-C8DD-4F1C-BD84-74B539B5C45F}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{123DAB76-C8DD-4F1C-BD84-74B539B5C45F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{123DAB76-C8DD-4F1C-BD84-74B539B5C45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{123DAB76-C8DD-4F1C-BD84-74B539B5C45F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{123DAB76-C8DD-4F1C-BD84-74B539B5C45F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{123DAB76-C8DD-4F1C-BD84-74B539B5C45F}.Release|.NET.ActiveCfg = Release|Any CPU
+		{123DAB76-C8DD-4F1C-BD84-74B539B5C45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{123DAB76-C8DD-4F1C-BD84-74B539B5C45F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{123DAB76-C8DD-4F1C-BD84-74B539B5C45F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{123DAB76-C8DD-4F1C-BD84-74B539B5C45F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
