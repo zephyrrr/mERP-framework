@@ -1,0 +1,1 @@
+call DeployAssemblies.bat .\Reference

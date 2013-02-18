@@ -1,0 +1,10 @@
+Base <- Model	<- Dao <- Controller 
+		  View
+
+Base <- Data; Security <- Windows <- WindowForm <- Grid
+			Script, NH   <- WindowModel  <- Controller
+Net
+Resource
+Script
+
+Base,Data <- NH
